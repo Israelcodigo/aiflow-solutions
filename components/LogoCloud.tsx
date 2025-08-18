@@ -30,7 +30,7 @@ const LogoCloud: React.FC = () => {
   };
 
   return (
-    <div className="w-full max-w-md flex justify-around items-center gap-8 py-8" role="img" aria-label="Logos de plataformas de inteligencia artificial soportadas">
+    <div className="w-full max-w-2xl flex justify-around items-center gap-16 py-8" role="img" aria-label="Logos de plataformas de inteligencia artificial soportadas">
       {logos.map((logo, index) => (
         <div
           key={logo.name}
