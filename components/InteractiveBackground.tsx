@@ -20,14 +20,22 @@ const InteractiveBackground: React.FC = () => {
 
   return (
     <div className="fixed top-0 left-0 w-full h-full -z-20 overflow-hidden" aria-hidden="true">
-      {/* Multi-layered Artistic Background */}
-      <div className="absolute inset-0">
-        {/* Base gradient with improved colors */}
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"></div>
-        
-        {/* Radial gradients for depth */}
-        <div className="absolute inset-0 bg-gradient-radial from-cyan-900/20 via-transparent to-transparent"></div>
-        <div className="absolute inset-0 bg-gradient-conic from-blue-900/10 via-purple-900/10 to-cyan-900/10"></div>
+      {/* UNIFIED BACKGROUND - NO SEAMS */}
+      <div className="absolute inset-0" style={{
+        background: 'linear-gradient(135deg, #0a0f1f 0%, #0d1a2e 35%, #0a1c3c 70%, #0a0f1f 100%)',
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: '100% 100%',
+        backgroundPosition: '0 0'
+      }}>
+        {/* Subtle asymmetric glow overlay */}
+        <div className="absolute inset-0" style={{
+          background: `
+            radial-gradient(ellipse 1000px 600px at 30% 20%, rgba(34, 211, 238, 0.06) 0%, transparent 60%),
+            radial-gradient(ellipse 1200px 800px at 70% 80%, rgba(59, 130, 246, 0.04) 0%, transparent 70%)
+          `,
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: '100% 100%'
+        }}></div>
         
         {/* Organic blob shapes */}
         <svg
@@ -80,6 +88,14 @@ const InteractiveBackground: React.FC = () => {
           <circle cx="30" cy="80" r="6" fill="rgba(59, 130, 246, 0.15)" />
         </svg>
       </div>
+
+      {/* Anti-banding noise layer */}
+      <div className="absolute inset-0 pointer-events-none" style={{
+        opacity: 0.03,
+        mixBlendMode: 'overlay',
+        backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='1' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.5'/%3E%3C/svg%3E")`,
+        backgroundSize: '200px 200px'
+      }}></div>
 
       {/* Optimized sparkle particles */}
       {!reduceMotion && particles.map((_, i) => {
