@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AIFlow Solutions - Consultoría IA para Empresas | ChatGPT, Claude, Gemini</title>
+    <meta name="description" content="Consultoría especializada en IA para empresas. Implementamos ChatGPT, Claude y Gemini con automatizaciones personalizadas. Desde 150€. Multiplica tu productividad con inteligencia artificial.">
+    <meta name="keywords" content="consultoría IA, ChatGPT empresas, Claude AI, Gemini Google, automatización IA, consultor inteligencia artificial, formación IA">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="AIFlow Solutions">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/images/chatgpt-logo.svg" />
+    
+    <!-- Preload critical assets -->
+    <link rel="preload" href="/images/chatgpt.png" as="image" type="image/png">
+    <link rel="preload" href="/images/claude.png" as="image" type="image/png">
+    <link rel="preload" href="/images/gemini.png" as="image" type="image/png">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aiflow.solutions/">
+    <meta property="og:title" content="AIFlow Solutions - Consultoría IA para Empresas">
+    <meta property="og:description" content="Consultoría especializada en IA para empresas. Implementamos ChatGPT, Claude y Gemini con automatizaciones personalizadas. Desde 150€.">
+    <meta property="og:image" content="/images/chatgpt.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:site_name" content="AIFlow Solutions">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://aiflow.solutions/">
+    <meta property="twitter:title" content="AIFlow Solutions - Consultoría IA para Empresas">
+    <meta property="twitter:description" content="Consultoría especializada en IA para empresas. Implementamos ChatGPT, Claude y Gemini con automatizaciones personalizadas. Desde 150€.">
+    <meta property="twitter:image" content="/images/chatgpt.png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.1.1/",
+    "react": "https://esm.sh/react@^19.1.1",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.1/"
+  }
+}
+</script>
+<style>
+    html {
+        scroll-behavior: smooth;
+    }
+
+    @keyframes sparkle {
+        0%, 100% { opacity: 0; transform: scale(0.5); }
+        50% { opacity: 1; transform: scale(1.2); }
+    }
+    .animate-sparkle {
+        animation: sparkle linear infinite;
+    }
+    
+    /* Custom gradient utilities for artistic background */
+    .bg-gradient-radial {
+        background: radial-gradient(circle, var(--tw-gradient-stops));
+    }
+    
+    .bg-gradient-conic {
+        background: conic-gradient(from 180deg, var(--tw-gradient-stops));
+    }
+    
+    /* Performance optimizations */
+    .will-change-transform {
+        will-change: transform;
+    }
+    
+    /* Accessibility: Respect prefers-reduced-motion */
+    @media (prefers-reduced-motion: reduce) {
+        .animate-sparkle,
+        .animate-pulse,
+        .animate-fade-in-down,
+        .animate-fade-in-up {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+        }
+    }
+    
+    /* Enhanced contrast for better accessibility */
+    .logo-contrast-bg {
+        background: rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    @keyframes fade-in-down {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    .animate-fade-in-down {
+        animation: fade-in-down 0.8s ease-out forwards;
+    }
+
+    @keyframes fade-in-up {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    .animate-fade-in-up {
+        animation: fade-in-up 0.8s ease-out forwards;
+    }
+
+    @keyframes rotate-glow {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+    }
+
+    .glow-card {
+        position: relative;
+        border-radius: 1rem; /* 16px to match rounded-2xl */
+        overflow: hidden;
+    }
+
+    .glow-card::before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        inset: -5px; /* Increased inset for blur */
+        background: conic-gradient(from 180deg at 50% 50%, #00d4ff, #0099ff, #0a0e27, #0a0e27, #00d4ff);
+        border-radius: inherit;
+        animation: rotate-glow 4s linear infinite;
+        opacity: 0;
+        transition: opacity 0.4s ease-in-out;
+        filter: blur(10px); /* Softens the glow */
+    }
+
+    .glow-card:hover::before {
+        opacity: 1;
+    }
+
+    .glow-card.featured-glow::before {
+        opacity: 0.5;
+        animation-duration: 3s;
+    }
+    .glow-card.featured-glow:hover::before {
+        opacity: 1;
+        animation-duration: 2s;
+    }
+
+    /* Hero Animation Keyframes */
+    @keyframes pulse {
+        0%, 100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(0, 212, 255, 0.7); }
+        70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(0, 212, 255, 0); }
+    }
+    @keyframes orbit {
+        from { transform: rotate(0deg) translateX(150px) rotate(0deg); }
+        to { transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+    }
+    @keyframes orbit-reverse {
+        from { transform: rotate(0deg) translateX(100px) rotate(0deg); }
+        to { transform: rotate(-360deg) translateX(100px) rotate(360deg); }
+    }
+    @keyframes draw-line {
+        to {
+            stroke-dashoffset: 0;
+        }
+    }
+</style>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
