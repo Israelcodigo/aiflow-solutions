@@ -43,11 +43,11 @@ const LogoCloud: React.FC = () => {
             <img 
               src={imageErrors.has(logo.name) ? logo.fallback : logo.src}
               alt={logo.alt}
-              className="h-16 w-16 md:h-20 md:w-20 object-contain filter drop-shadow-lg transition-all duration-300 group-hover:drop-shadow-2xl group-hover:brightness-110"
+              className="h-20 w-20 md:h-24 md:w-24 object-contain filter drop-shadow-lg transition-all duration-300 group-hover:drop-shadow-2xl group-hover:brightness-110"
               loading="lazy"
               decoding="async"
-              width="80"
-              height="80"
+              width="96"
+              height="96"
               onError={() => handleImageError(logo.name)}
             />
           </div>
