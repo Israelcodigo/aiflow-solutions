@@ -22,3 +22,10 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Build artifacts (added by cleanup)
+dist/
+build/
+
+# Archive directory
+archive/
