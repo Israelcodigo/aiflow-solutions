@@ -79,9 +79,6 @@ const InteractiveBackground: React.FC = () => {
           <circle cx="60" cy="20" r="8" fill="rgba(6, 182, 212, 0.1)" />
           <circle cx="30" cy="80" r="6" fill="rgba(59, 130, 246, 0.15)" />
         </svg>
-        
-        {/* Glassmorphism overlay for logo area */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full bg-gradient-to-br from-white/5 to-transparent backdrop-blur-sm border border-white/10"></div>
       </div>
 
       {/* Optimized sparkle particles */}
