@@ -18,7 +18,7 @@ const LogoCloud: React.FC = () => {
       alt: 'Logo de Claude - Asistente de IA de Anthropic'
     },
     { 
-      src: '/images/gemini-optimized.svg', // Use optimized SVG directly for Gemini
+      src: '/images/gemini.png', // Use real Gemini logo PNG
       fallback: '/images/gemini-optimized.svg',
       name: 'Gemini', 
       alt: 'Logo de Gemini - IA multimodal de Google'
