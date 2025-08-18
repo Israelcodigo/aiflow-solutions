@@ -38,19 +38,18 @@ const LogoCloud: React.FC = () => {
           style={{ animationDelay: `${1 + index * 0.2}s`, animationFillMode: 'forwards' }}
           title={logo.name}
         >
-          <div className="relative p-6 bg-slate-900/80 backdrop-blur-md rounded-2xl border border-slate-600/50 group-hover:bg-cyan-400/10 group-hover:border-cyan-400/50 transition-all duration-300 transform group-hover:scale-110 group-hover:-translate-y-1 flex items-center justify-center logo-contrast-bg">
+          {/* Solo el logo, sin fondo de tarjeta */}
+          <div className="relative flex items-center justify-center transition-all duration-300 transform group-hover:scale-110 group-hover:-translate-y-1">
             <img 
               src={imageErrors.has(logo.name) ? logo.fallback : logo.src}
               alt={logo.alt}
-              className="h-12 w-12 md:h-14 md:w-14 object-contain filter drop-shadow-lg"
+              className="h-16 w-16 md:h-20 md:w-20 object-contain filter drop-shadow-lg transition-all duration-300 group-hover:drop-shadow-2xl group-hover:brightness-110"
               loading="lazy"
               decoding="async"
-              width="56"
-              height="56"
+              width="80"
+              height="80"
               onError={() => handleImageError(logo.name)}
             />
-            {/* Subtle glow effect for better visibility */}
-            <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </div>
           <span className="text-sm font-medium text-slate-300 group-hover:text-cyan-200 transition-colors duration-300 drop-shadow-sm">
             {logo.name}
