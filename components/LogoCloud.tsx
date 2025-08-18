@@ -43,11 +43,15 @@ const LogoCloud: React.FC = () => {
             <img 
               src={imageErrors.has(logo.name) ? logo.fallback : logo.src}
               alt={logo.alt}
-              className="h-24 w-24 md:h-32 md:w-32 object-contain filter drop-shadow-lg transition-all duration-300 group-hover:drop-shadow-2xl group-hover:brightness-110"
+              className={`object-contain filter drop-shadow-lg transition-all duration-300 group-hover:drop-shadow-2xl group-hover:brightness-110 ${
+                logo.name === 'ChatGPT' || logo.name === 'Claude' 
+                  ? 'h-28 w-28 md:h-36 md:w-36' 
+                  : 'h-24 w-24 md:h-32 md:w-32'
+              }`}
               loading="lazy"
               decoding="async"
-              width="128"
-              height="128"
+              width={logo.name === 'ChatGPT' || logo.name === 'Claude' ? "144" : "128"}
+              height={logo.name === 'ChatGPT' || logo.name === 'Claude' ? "144" : "128"}
               onError={() => handleImageError(logo.name)}
             />
           </div>
