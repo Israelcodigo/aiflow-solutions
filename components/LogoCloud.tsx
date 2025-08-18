@@ -34,7 +34,7 @@ const LogoCloud: React.FC = () => {
       {logos.map((logo, index) => (
         <div
           key={logo.name}
-          className="opacity-0 animate-fade-in-up group flex flex-col items-center gap-3"
+          className="opacity-0 animate-fade-in-up group flex flex-col items-center"
           style={{ animationDelay: `${1 + index * 0.2}s`, animationFillMode: 'forwards' }}
           title={logo.name}
         >
@@ -51,9 +51,6 @@ const LogoCloud: React.FC = () => {
               onError={() => handleImageError(logo.name)}
             />
           </div>
-          <span className="text-sm font-medium text-slate-300 group-hover:text-cyan-200 transition-colors duration-300 drop-shadow-sm">
-            {logo.name}
-          </span>
         </div>
       ))}
     </div>
