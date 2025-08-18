@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm test -- --coverage --reporter=verbose)",
+      "Bash(npm test -- --coverage --run)",
+      "Bash(npm install:*)",
+      "Bash(rm:*)",
+      "Bash(npm run lint)",
+      "Bash(git diff:*)"
+    ],
+    "deny": []
+  }
+}
