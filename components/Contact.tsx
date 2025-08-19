@@ -25,6 +25,7 @@ const Contact: React.FC = () => {
         data.append("_subject", "Nuevo Lead desde la Web de AIFlow!");
         data.append("_captcha", "false");
         data.append("_template", "table");
+        data.append("_next", "https://aiflow-solutions.vercel.app");
         Object.entries(formData).forEach(([key, value]) => {
             data.append(key, value);
         });
@@ -32,23 +33,27 @@ const Contact: React.FC = () => {
         const endpoint = 'https://formsubmit.co/israelicloud1@gmail.com';
 
         try {
+            console.log('Enviando a:', endpoint);
             const response = await fetch(endpoint, {
                 method: 'POST',
                 body: data
             });
             
+            console.log('Response status:', response.status);
+            console.log('Response ok:', response.ok);
+            
             if (response.ok) {
                 setStatus('success');
-                setStatusMessage('¡Gracias por tu interés! Te contactaremos en menos de 24 horas.');
+                setStatusMessage('¡Email enviado correctamente! Revisa tu bandeja de entrada (incluido spam).');
                 setFormData({ name: '', company: '', email: '', message: '' });
             } else {
                 setStatus('error');
-                setStatusMessage('Hubo un error al enviar el formulario. Por favor, inténtalo de nuevo.');
+                setStatusMessage(`Error ${response.status}: No se pudo enviar. Inténtalo de nuevo.`);
             }
         } catch (error) {
             console.error('Form submission error:', error);
             setStatus('error');
-            setStatusMessage('Hubo un error de red. Por favor, inténtalo de nuevo más tarde.');
+            setStatusMessage('Error de red. Revisa la consola del navegador para más detalles.');
         }
     };
 
