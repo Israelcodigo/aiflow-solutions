@@ -2,10 +2,10 @@
 import React, { useState, useEffect, useRef } from 'react';
 
 const processSteps = [
-  { number: "1", title: "Análisis", description: "Estudiamos tu empresa y procesos actuales para identificar puntos clave de mejora." },
-  { number: "2", title: "Implementación", description: "Configuramos y personalizamos las herramientas IA seleccionadas para tu flujo de trabajo." },
-  { number: "3", title: "Formación", description: "Capacitamos a tu equipo con sesiones prácticas para que dominen las nuevas herramientas." },
-  { number: "4", title: "Soporte", description: "Te acompañamos durante 30 días para resolver dudas y asegurar una transición exitosa." },
+  { number: "1", title: "Análisis", description: "Evaluación de procesos y detección de oportunidades de mejora." },
+  { number: "2", title: "Implementación", description: "Configuración y personalización de herramientas de IA." },
+  { number: "3", title: "Formación", description: "Capacitación práctica para adopción efectiva." },
+  { number: "4", title: "Soporte", description: "Acompañamiento 30 días para asegurar una transición estable." },
 ];
 
 const ProcessStep: React.FC<typeof processSteps[0]> = ({ number, title, description }) => (

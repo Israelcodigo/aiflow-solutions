@@ -9,7 +9,7 @@ const servicesData = [
         id: "consultoria-ia",
         icon: <LightbulbIcon />,
         title: "Consultoría IA",
-        description: "Análisis completo de tu empresa e identificación de oportunidades para implementar IA en 2 horas.",
+        description: "Auditoría técnica de 2 horas para identificar casos de uso prioritarios, estimar impacto y definir un roadmap accionable.",
         price: "150 € por sesión",
         priceNumeric: 150,
         details: [
@@ -23,7 +23,7 @@ const servicesData = [
         id: "gpts-personalizados",
         icon: <RobotIcon />,
         title: "GPTs Personalizados",
-        description: "Asistentes de IA especializados para tu empresa: atención al cliente, contenido y análisis de datos.",
+        description: "Asistentes de IA diseñados para tu operación: atención al cliente, soporte interno, creación de contenido y analítica.",
         price: "149 € por GPT",
         priceNumeric: 149,
         details: [
@@ -37,7 +37,7 @@ const servicesData = [
         id: "automatizaciones",
         icon: <BoltIcon />,
         title: "Automatizaciones",
-        description: "Conexión de aplicaciones (email, CRM, Excel) para eliminar tareas repetitivas y ahorrar tiempo.",
+        description: "Orquestamos flujos entre email, CRM, ERP y hojas de cálculo para eliminar tareas repetitivas, reducir errores y acelerar ciclos.",
         price: "Desde 349 €/mes",
         priceNumeric: 349,
         details: [
@@ -51,7 +51,7 @@ const servicesData = [
         id: "integracion-mcp",
         icon: <LinkIcon />,
         title: "Integración MCP",
-        description: "Conexión directa de ChatGPT o Claude con Slack, Google Drive y herramientas empresariales.",
+        description: "Conecta ChatGPT o Claude con Slack, Google Drive y más mediante Model Context Protocol (MCP) para contexto en tiempo real.",
         price: "299 € instalación",
         priceNumeric: 299,
         details: [
@@ -65,7 +65,7 @@ const servicesData = [
         id: "pack-prompts-pro",
         icon: <DocumentTextIcon />,
         title: "Pack Prompts Pro",
-        description: "Conjunto de prompts optimizados para tu sector que multiplican la efectividad de cualquier IA.",
+        description: "Kits de prompts por sector con guías y ejemplos listos para uso profesional.",
         price: "99 € por pack",
         priceNumeric: 99,
         details: [
@@ -79,7 +79,7 @@ const servicesData = [
         id: "formacion",
         icon: <AcademicCapIcon />,
         title: "Formación",
-        description: "Capacitación para tu equipo en ChatGPT, Claude y otras IAs con formación práctica adaptada.",
+        description: "Programas de capacitación práctica en ChatGPT, Claude y otras IAs. Itinerarios por nivel y sector.",
         price: "Desde 89 €/hora",
         priceNumeric: 89,
         details: [

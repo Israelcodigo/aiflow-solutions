@@ -6,17 +6,17 @@ import LogoCloud from './LogoCloud';
 const keyBenefits = [
   {
     icon: <BoltIcon className="w-6 h-6" />,
-    text: 'Automatización Eficiente',
+    text: 'Automatización eficiente',
     delay: '1s'
   },
   {
     icon: <LightbulbIcon className="w-6 h-6" />,
-    text: 'Decisiones Inteligentes',
+    text: 'Decisiones informadas',
     delay: '1.2s'
   },
   {
     icon: <AcademicCapIcon className="w-6 h-6" />,
-    text: 'Capacitación Experta',
+    text: 'Capacitación experta',
     delay: '1.4s'
   }
 ];
@@ -35,7 +35,7 @@ const Hero: React.FC = () => {
                         </div>
                         <div className="animate-fade-in-up" style={{ animationDelay: '0.4s', animationFillMode: 'backwards' }}>
                             <p className="text-lg md:text-xl text-slate-300 max-w-xl mx-auto lg:mx-0 mb-8">
-                                Consultoría especializada en implementación de inteligencia artificial para empresas y particulares. Te enseñamos a usar ChatGPT, Claude y otras herramientas IA de forma profesional.
+                                Consultoría especializada en implementación de inteligencia artificial para organizaciones y profesionales. Te capacitamos para aprovechar ChatGPT, Claude, Gemini y otras IAs con estándares de seguridad, calidad y medición de impacto.
                             </p>
                             <div className="flex gap-4 justify-center lg:justify-start flex-wrap">
                                 <a href="#contacto" className="px-8 py-4 rounded-full font-bold text-white bg-gradient-to-r from-cyan-500 to-blue-600 hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/30 transform transition-all duration-300">

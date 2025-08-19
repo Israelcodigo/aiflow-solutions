@@ -55,14 +55,14 @@ const IntroSection: React.FC = () => {
                         De la Idea a la Implementación, <span className="text-cyan-400">sin Fricción.</span>
                     </h2>
                     <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-                        Tu socio estratégico en la era de la IA, para empresas y particulares.
+                        Tu socio estratégico en la era de la IA, para empresas y profesionales.
                     </p>
                 </div>
                 <div
                      className={`transition-all duration-1000 ease-out delay-300 mt-8 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
                 >
                     <p className="text-lg text-slate-400 max-w-4xl mx-auto leading-relaxed">
-                         En AIFlow Solutions, eliminamos la complejidad de la IA. No solo te ofrecemos herramientas; construimos soluciones integradas que se adaptan a tus procesos, potencian a tu equipo y generan resultados medibles. Nuestro enfoque es simple: hacer que la tecnología más avanzada trabaje para ti, de forma práctica y eficiente.
+                         En AIFlow Solutions, convertimos la IA en un activo operativo. Diseñamos e integramos soluciones a medida que se alinean con tus procesos, fortalecen a tu equipo y entregan resultados medibles. Nuestro compromiso: tecnología avanzada aplicada de forma práctica, segura y eficiente.
                     </p>
                 </div>
             </div>

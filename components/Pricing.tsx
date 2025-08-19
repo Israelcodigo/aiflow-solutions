@@ -20,7 +20,7 @@ const pricingData: PricingPlan[] = [
     name: "Servicios Únicos",
     type: "one-time",
     price: "Desde 89€",
-    description: "Compra una vez, úsalo para siempre. Soluciones específicas para tus necesidades.",
+    description: "Soluciones cerradas para objetivos concretos.",
     features: [
       "Consultoría IA (150€/sesión)",
       "GPTs Personalizados (149€/GPT)",
@@ -36,12 +36,12 @@ const pricingData: PricingPlan[] = [
     name: "Automatización con IA",
     type: "subscription",
     price: { monthly: 349, annual: 3769 },
-    description: "Diseñamos un sistema que automatiza una tarea repetitiva usando IA. El precio final depende de la complejidad de la tarea.",
+    description: "Diseñamos un sistema que automatiza un proceso repetitivo con IA. Precio final según complejidad.",
     features: [
-      "Ahorra horas de trabajo cada semana.",
-      "Tu automatización funcionando 24/7 sin interrupciones.",
-      "Nos encargamos de toda la complejidad técnica.",
-      "Soporte y mantenimiento incluidos.",
+      "Ahorro de horas semanales",
+      "Operación 24/7 sin interrupciones",
+      "Gestión integral de la complejidad técnica",
+      "Soporte y mantenimiento incluidos",
     ],
     featured: true,
     cta: "Empezar a Automatizar",
@@ -53,12 +53,7 @@ const pricingData: PricingPlan[] = [
     price: "Personalizado",
     description: "Soluciones a medida y formación avanzada para tu organización.",
     features: [
-      "Todo lo del Plan de Suscripción y además:",
-      "Desarrollo de múltiples soluciones",
-      "Automatizaciones a gran escala",
-      "Formación para equipos completos",
-      "Soporte técnico dedicado",
-      "Consultoría estratégica ilimitada",
+      "Incluye todo lo del plan de suscripción y, además: múltiples soluciones, automatizaciones a gran escala, formación para equipos completos, soporte técnico dedicado, consultoría estratégica ilimitada.",
     ],
     featured: false,
     cta: "Contactar",
@@ -149,7 +144,7 @@ const Pricing: React.FC = () => {
       <div className="container mx-auto px-6">
         <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-6 text-white [text-shadow:0_0_20px_theme(colors.cyan.400/0.5)]">Planes Flexibles para Crecer</h2>
         <p className="text-lg text-slate-400 text-center mb-12 max-w-2xl mx-auto">
-            Elige entre pagos únicos para servicios específicos o suscríbete para un soporte y mantenimiento continuo.
+            Elige pagos únicos para necesidades específicas o suscripción con soporte y mantenimiento continuo.
         </p>
 
         {/* Billing Cycle Toggle */}
