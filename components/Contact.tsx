@@ -23,24 +23,21 @@ const Contact: React.FC = () => {
 
         const data = new FormData();
         data.append("_subject", "Nuevo Lead desde la Web de AIFlow!");
+        data.append("_captcha", "false");
+        data.append("_template", "table");
         Object.entries(formData).forEach(([key, value]) => {
             data.append(key, value);
         });
 
-        const endpoint = 'https://formsubmit.co/ajax/israelicloud1@gmail.com';
+        const endpoint = 'https://formsubmit.co/israelicloud1@gmail.com';
 
         try {
             const response = await fetch(endpoint, {
                 method: 'POST',
-                body: data,
-                headers: {
-                    'Accept': 'application/json'
-                }
+                body: data
             });
             
-            const result = await response.json();
-
-            if (result.success === "true") {
+            if (response.ok) {
                 setStatus('success');
                 setStatusMessage('¡Gracias por tu interés! Te contactaremos en menos de 24 horas.');
                 setFormData({ name: '', company: '', email: '', message: '' });
