@@ -33,27 +33,23 @@ const Contact: React.FC = () => {
         const endpoint = 'https://formsubmit.co/israelicloud1@gmail.com';
 
         try {
-            console.log('Enviando a:', endpoint);
             const response = await fetch(endpoint, {
                 method: 'POST',
                 body: data
             });
             
-            console.log('Response status:', response.status);
-            console.log('Response ok:', response.ok);
-            
             if (response.ok) {
                 setStatus('success');
-                setStatusMessage('¡Email enviado correctamente! Revisa tu bandeja de entrada (incluido spam).');
+                setStatusMessage('¡Gracias por tu interés! Te contactaremos en menos de 24 horas.');
                 setFormData({ name: '', company: '', email: '', message: '' });
             } else {
                 setStatus('error');
-                setStatusMessage(`Error ${response.status}: No se pudo enviar. Inténtalo de nuevo.`);
+                setStatusMessage('Hubo un error al enviar el formulario. Por favor, inténtalo de nuevo.');
             }
         } catch (error) {
             console.error('Form submission error:', error);
             setStatus('error');
-            setStatusMessage('Error de red. Revisa la consola del navegador para más detalles.');
+            setStatusMessage('Hubo un error de red. Por favor, inténtalo de nuevo más tarde.');
         }
     };
 
