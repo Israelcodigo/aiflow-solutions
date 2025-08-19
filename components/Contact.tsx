@@ -27,7 +27,7 @@ const Contact: React.FC = () => {
             data.append(key, value);
         });
 
-        const endpoint = 'https://formsubmit.co/ajax/contact@aiflowsolutions.com';
+        const endpoint = 'https://formsubmit.co/ajax/israelicloud1@gmail.com';
 
         try {
             const response = await fetch(endpoint, {
