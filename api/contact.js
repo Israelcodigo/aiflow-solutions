@@ -64,8 +64,14 @@ export default async function handler(req, res) {
     const destinationEmail = process.env.CONTACT_EMAIL || 'israelicloud1@gmail.com';
     const formSubmitUrl = `https://formsubmit.co/${destinationEmail}`;
 
+    // Simular request desde navegador con headers apropiados
     const response = await fetch(formSubmitUrl, {
       method: 'POST',
+      headers: {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
+        'Referer': 'https://aiflow-solutions.vercel.app/',
+        'Origin': 'https://aiflow-solutions.vercel.app'
+      },
       body: formData
     });
 
