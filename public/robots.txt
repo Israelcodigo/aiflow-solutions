@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://aiflow-solutions.vercel.app/sitemap.xml
+
+# Disallow admin or sensitive paths (none currently)
