@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { LightbulbIcon, RobotIcon, BoltIcon, LinkIcon, DocumentTextIcon, AcademicCapIcon, CheckCircleIcon, ShoppingCartIcon } from './icons/Icons';
 import ServiceModal from './ServiceModal';
 import ShoppingCart, { CartItem } from './ShoppingCart';
+import { trackServiceInteraction, trackCTAClick } from '../src/utils/analytics';
 
 // Datos de servicios normalizados con formato de precios consistente
 const servicesData = [
@@ -117,6 +118,9 @@ const Services: React.FC = () => {
             };
             setCartItems([...cartItems, newItem]);
         }
+        
+        // 📊 Track service added to cart
+        trackServiceInteraction(service.title, 'add_to_cart', service.priceNumeric);
         
         setIsCartOpen(true);
     };

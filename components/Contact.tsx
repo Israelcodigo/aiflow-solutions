@@ -1,5 +1,6 @@
 
 import React, { useState } from 'react';
+import { trackFormSubmission, trackEvent } from '../src/utils/analytics';
 
 const Contact: React.FC = () => {
     const [formData, setFormData] = useState({
@@ -40,14 +41,27 @@ const Contact: React.FC = () => {
                 setStatus('success');
                 setStatusMessage(result.message || '¡Gracias por tu interés! Te contactaremos pronto.');
                 setFormData({ name: '', company: '', email: '', message: '', honeypot: '' });
+                
+                // 📊 Track successful form submission
+                trackFormSubmission(true, 'contact');
             } else {
                 setStatus('error');
                 setStatusMessage(result.error || 'Error al enviar el formulario. Inténtalo de nuevo.');
+                
+                // 📊 Track failed form submission
+                trackFormSubmission(false, 'contact');
             }
         } catch (error) {
             console.error('Form submission error:', error);
             setStatus('error');
             setStatusMessage('Error de conexión. Por favor, verifica tu conexión e inténtalo de nuevo.');
+            
+            // 📊 Track network error
+            trackEvent('form_error', {
+                event_category: 'error',
+                event_label: 'network_error',
+                error_message: error instanceof Error ? error.message : 'Unknown error'
+            });
         }
     };
 
