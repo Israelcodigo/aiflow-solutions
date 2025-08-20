@@ -6,7 +6,8 @@ const Contact: React.FC = () => {
         name: '',
         company: '',
         email: '',
-        message: ''
+        message: '',
+        honeypot: '' // Campo oculto anti-spam
     });
     const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
     const [statusMessage, setStatusMessage] = useState('');
@@ -21,35 +22,32 @@ const Contact: React.FC = () => {
         setStatus('submitting');
         setStatusMessage('');
 
-        const data = new FormData();
-        data.append("_subject", "Nuevo Lead desde la Web de AIFlow!");
-        data.append("_captcha", "false");
-        data.append("_template", "table");
-        data.append("_next", "https://aiflow-solutions.vercel.app");
-        Object.entries(formData).forEach(([key, value]) => {
-            data.append(key, value);
-        });
-
-        const endpoint = 'https://formsubmit.co/israelicloud1@gmail.com';
+        // Usar nuestra API endpoint
+        const endpoint = '/api/contact';
 
         try {
             const response = await fetch(endpoint, {
                 method: 'POST',
-                body: data
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData)
             });
             
-            if (response.ok) {
+            const result = await response.json();
+            
+            if (response.ok && result.success) {
                 setStatus('success');
-                setStatusMessage('¡Gracias por tu interés! Te contactaremos en menos de 24 horas.');
-                setFormData({ name: '', company: '', email: '', message: '' });
+                setStatusMessage(result.message || '¡Gracias por tu interés! Te contactaremos pronto.');
+                setFormData({ name: '', company: '', email: '', message: '', honeypot: '' });
             } else {
                 setStatus('error');
-                setStatusMessage('Hubo un error al enviar el formulario. Por favor, inténtalo de nuevo.');
+                setStatusMessage(result.error || 'Error al enviar el formulario. Inténtalo de nuevo.');
             }
         } catch (error) {
             console.error('Form submission error:', error);
             setStatus('error');
-            setStatusMessage('Hubo un error de red. Por favor, inténtalo de nuevo más tarde.');
+            setStatusMessage('Error de conexión. Por favor, verifica tu conexión e inténtalo de nuevo.');
         }
     };
 
@@ -77,6 +75,18 @@ const Contact: React.FC = () => {
                                     <label htmlFor="message" className="block text-sm font-medium text-slate-300 mb-2">¿Qué quieres mejorar?</label>
                                     <textarea name="message" id="message" rows={4} required value={formData.message} onChange={handleChange} className="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 transition-all"></textarea>
                                 </div>
+                                
+                                {/* Honeypot field - hidden from users, visible to bots */}
+                                <input
+                                    type="text"
+                                    name="honeypot"
+                                    value={formData.honeypot}
+                                    onChange={handleChange}
+                                    style={{ display: 'none' }}
+                                    tabIndex={-1}
+                                    autoComplete="off"
+                                    aria-hidden="true"
+                                />
                             </div>
                             <div className="mt-6">
                                 <button type="submit" disabled={status === 'submitting'} className="w-full px-8 py-4 rounded-full font-bold text-white bg-gradient-to-r from-cyan-500 to-blue-600 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/40 transform transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed">
