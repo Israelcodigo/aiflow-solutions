@@ -15,8 +15,9 @@ const servicesData = [
         priceNumeric: 150,
         details: [
             "Análisis profundo de flujos de trabajo.",
-            "Hoja de ruta de implementación personalizada.",
+            "Hoja de ruta de implementación personalizada.", 
             "Estimación de ROI y métricas de éxito.",
+            "Metodología específica para medir el impacto obtenido.",
             "Recomendación de herramientas y plataformas."
         ]
     },
@@ -30,8 +31,7 @@ const servicesData = [
         details: [
             "Basado en tus documentos y base de conocimientos.",
             "Integración con tus sistemas existentes.",
-            "Optimizado para tareas específicas: ventas, soporte, etc.",
-            "Entrega con panel de control y analíticas de uso."
+            "Optimizado para tareas específicas: ventas, soporte, etc."
         ]
     },
     {
@@ -42,10 +42,10 @@ const servicesData = [
         price: "Desde 349 €/mes",
         priceNumeric: 349,
         details: [
-            "Automatización de entrada de datos y reportes.",
-            "Clasificación y respuesta automática de correos.",
-            "Sincronización de datos entre plataformas.",
-            "Workflows personalizados con herramientas como Zapier o Make."
+            "Producto diseñado completamente para cumplir con las necesidades específicas del cliente.",
+            "No incluye ninguna función específica de base.",
+            "Workflows personalizados con herramientas como Zapier o Make.",
+            "Solución a medida según los requerimientos del negocio."
         ]
     },
     {
@@ -58,7 +58,7 @@ const servicesData = [
         details: [
             "Consultas directas a la IA desde Slack.",
             "Resumen y análisis de documentos en Google Drive.",
-            "Generación de contenido directamente en tus apps.",
+            "Desarrollo completo del MCP según necesidades.",
             "Configuración de seguridad y permisos de acceso."
         ]
     },
@@ -70,10 +70,10 @@ const servicesData = [
         price: "99 € por pack",
         priceNumeric: 99,
         details: [
-            "Prompts para marketing, ventas, RRHH y operaciones.",
-            "Guía de 'prompt engineering' para crear los tuyos.",
-            "Adaptados a los modelos más recientes (GPT-4, Claude 3).",
-            "Actualizaciones periódicas con nuevas técnicas."
+            "Creados específicamente para los últimos modelos de IA.",
+            "Optimizados para GPT-5, Claude Opus, Sonnet y Gemini 2.5 Pro.",
+            "Diseñados para cada propósito específico que solicite el cliente.",
+            "No son genéricos sino completamente personalizados."
         ]
     },
     {
@@ -87,7 +87,7 @@ const servicesData = [
             "Sesiones prácticas con casos de uso reales.",
             "Material didáctico y guías de referencia.",
             "Enfoque en seguridad y uso ético de la IA.",
-            "Certificado de finalización para los asistentes."
+            "Formación práctica sin certificación educativa oficial."
         ]
     }
 ];
