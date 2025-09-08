@@ -96,20 +96,9 @@
     }
     </script>
 
-    <!-- Google Analytics 4 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PLACEHOLDER123"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-PLACEHOLDER123', {
-        page_title: document.title,
-        page_location: window.location.href,
-        send_page_view: true
-      });
-    </script>
+    <!-- Google Analytics 4 - Ahora cargado dinámicamente desde TypeScript -->
 
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind CSS now loaded via Vite from src/index.css -->
 <script type="importmap">
 {
   "imports": {
@@ -307,7 +296,7 @@
         color: rgba(34, 211, 238, 0.8);
     }
 </style>
-<link rel="stylesheet" href="/index.css">
+<!-- CSS now bundled via Vite from src/index.css -->
 </head>
 <body>
     <div id="root"></div>

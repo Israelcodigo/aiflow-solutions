@@ -23,10 +23,20 @@ export default defineConfig(({ mode }) => {
                 return `assets/images/[name]-[hash][extname]`;
               }
               return `assets/[name]-[hash][extname]`;
+            },
+            manualChunks: {
+              // React & React DOM como chunk separado
+              'react-vendor': ['react', 'react-dom'],
+              // Analytics y utilidades como chunk separado
+              'utils': ['./src/utils/analytics'],
+              // Componentes pesados como chunks separados
+              'services': ['./components/Services', './components/ServiceModal', './components/ShoppingCart'],
+              'interactive': ['./components/InteractiveBackground'],
             }
           }
         },
         assetsInlineLimit: 0, // No inline images for better caching
+        chunkSizeWarningLimit: 250, // Avisar si chunks > 250KB
       }
     };
 });
