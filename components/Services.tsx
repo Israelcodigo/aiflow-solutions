@@ -10,7 +10,7 @@ const servicesData = [
         id: "consultoria-ia",
         icon: <LightbulbIcon />,
         title: "Consultoría IA",
-        description: "Auditoría técnica de 2 horas para identificar casos de uso prioritarios, estimar impacto y definir un roadmap accionable.",
+        description: "Auditoría técnica de 2 horas que identifica oportunidades de automatización de procesos para pymes, reduciendo hasta 20 horas semanales de trabajo manual y aumentando la productividad un 40%.",
         price: "150 € por sesión",
         priceNumeric: 150,
         details: [
@@ -25,7 +25,7 @@ const servicesData = [
         id: "gpts-personalizados",
         icon: <RobotIcon />,
         title: "GPTs Personalizados",
-        description: "Asistentes de IA diseñados para tu operación: atención al cliente, soporte interno, creación de contenido y analítica.",
+        description: "Chatbots para ecommerce y asistentes IA personalizados que automatizan atención al cliente, reducen tiempos de respuesta un 85% y aumentan conversiones hasta un 25%.",
         price: "149 € por GPT",
         priceNumeric: 149,
         details: [
@@ -38,7 +38,7 @@ const servicesData = [
         id: "automatizaciones",
         icon: <BoltIcon />,
         title: "Automatizaciones",
-        description: "Orquestamos flujos entre email, CRM, ERP y hojas de cálculo para eliminar tareas repetitivas, reducir errores y acelerar ciclos.",
+        description: "Automatización de procesos administrativos conectando email, CRM y ERP. Elimina tareas repetitivas, reduce errores un 90% y acelera ciclos operativos ahorrando 30+ horas mensuales.",
         price: "Desde 349 €/mes",
         priceNumeric: 349,
         details: [

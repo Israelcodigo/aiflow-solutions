@@ -8,6 +8,7 @@ import Pricing from './components/Pricing';
 import Process from './components/Process';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import Blog from './components/Blog';
 import InteractiveBackground from './components/InteractiveBackground';
 
 const App: React.FC = () => {
@@ -21,6 +22,7 @@ const App: React.FC = () => {
         <Services />
         <Pricing />
         <Process />
+        <Blog />
         <Contact />
       </main>
       <Footer />
