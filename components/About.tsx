@@ -14,17 +14,16 @@ const About: React.FC = () => {
                 </header>
 
                 <div className="grid lg:grid-cols-2 gap-16 items-center">
-                    {/* Team Photo */}
+                    {/* Visual Element */}
                     <div className="flex justify-center">
                         <div className="relative">
-                            <img 
-                                src="/images/team-founder.jpg"
-                                alt="Equipo fundador de Deified Machines - Especialistas en IA y automatización empresarial"
-                                className="rounded-2xl shadow-2xl w-full max-w-md hover:scale-105 transition-transform duration-300"
-                                loading="lazy"
-                                width="400"
-                                height="500"
-                            />
+                            <div className="w-full max-w-md h-80 bg-gradient-to-br from-cyan-500/20 to-blue-600/20 rounded-2xl shadow-2xl flex items-center justify-center border border-cyan-400/30">
+                                <div className="text-center">
+                                    <div className="text-6xl mb-4">🤖</div>
+                                    <div className="text-cyan-400 font-bold text-xl">IA Aplicada</div>
+                                    <div className="text-slate-300 text-sm mt-2">Soluciones Reales</div>
+                                </div>
+                            </div>
                             <div className="absolute -bottom-4 -right-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg font-semibold shadow-lg">
                                 Especialista IA
                             </div>
@@ -34,33 +33,34 @@ const About: React.FC = () => {
                     {/* Content */}
                     <div className="space-y-6">
                         <h3 className="text-3xl font-bold text-white mb-4">
-                            Especialista en Implementación de IA
+                            Transformo Ideas en Automatizaciones Inteligentes
                         </h3>
                         
                         <p className="text-slate-300 leading-relaxed text-lg">
-                            Soy un desarrollador especializado en aplicar inteligencia artificial a problemas empresariales reales. 
-                            Mi enfoque está en <span className="text-cyan-400 font-semibold">implementar soluciones prácticas</span> 
-                            que generen valor inmediato, sin complicaciones técnicas innecesarias.
+                            Como desarrollador especializado en IA aplicada, mi misión es clara: convertir el potencial de la 
+                            inteligencia artificial en <span className="text-cyan-400 font-semibold">resultados tangibles para tu negocio</span>. 
+                            No me conformo con teoría, construyo soluciones que funcionan desde el día uno.
                         </p>
 
                         <p className="text-slate-300 leading-relaxed text-lg">
-                            Me dedico a <span className="text-cyan-400 font-semibold">dominar herramientas como ChatGPT, Claude y Gemini</span> 
-                            para crear automatizaciones personalizadas. Mi valor está en saber exactamente cómo aplicar estas 
-                            tecnologías para resolver problemas específicos de cada negocio.
+                            Mi expertise radica en <span className="text-cyan-400 font-semibold">dominar las herramientas más avanzadas</span> 
+                            —ChatGPT, Claude, Gemini— y orquestarlas para crear automatizaciones que eliminan tareas repetitivas, 
+                            optimizan procesos y liberan tiempo valioso. Cada implementación está diseñada para generar 
+                            <span className="text-cyan-400 font-semibold">impacto medible inmediato</span>.
                         </p>
 
                         <div className="grid grid-cols-3 gap-6 mt-8">
                             <div className="text-center p-4 bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-xl border border-slate-700/50">
-                                <div className="text-2xl font-bold text-cyan-400 mb-1">100%</div>
-                                <div className="text-sm text-slate-400">Práctico</div>
+                                <div className="text-2xl font-bold text-cyan-400 mb-1">⚡</div>
+                                <div className="text-sm text-slate-400">Implementación Rápida</div>
                             </div>
                             <div className="text-center p-4 bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-xl border border-slate-700/50">
-                                <div className="text-2xl font-bold text-cyan-400 mb-1">IA</div>
-                                <div className="text-sm text-slate-400">Aplicada</div>
+                                <div className="text-2xl font-bold text-cyan-400 mb-1">🎯</div>
+                                <div className="text-sm text-slate-400">Resultados Medibles</div>
                             </div>
                             <div className="text-center p-4 bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-xl border border-slate-700/50">
-                                <div className="text-2xl font-bold text-cyan-400 mb-1">Real</div>
-                                <div className="text-sm text-slate-400">Valor</div>
+                                <div className="text-2xl font-bold text-cyan-400 mb-1">🚀</div>
+                                <div className="text-sm text-slate-400">Impacto Inmediato</div>
                             </div>
                         </div>
 

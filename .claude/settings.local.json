@@ -6,7 +6,8 @@
       "Bash(npm install:*)",
       "Bash(rm:*)",
       "Bash(npm run lint)",
-      "Bash(git diff:*)"
+      "Bash(git diff:*)",
+      "Bash(git add:*)"
     ],
     "deny": []
   }
