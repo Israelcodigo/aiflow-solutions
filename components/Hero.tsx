@@ -30,16 +30,16 @@ const Hero: React.FC = () => {
                     <div className="flex-1 text-center lg:text-left">
                         <div className="animate-fade-in-down">
                             <h1 className="text-4xl md:text-6xl font-extrabold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                                Construye, escala y automatiza con IA
+                                Deja de perder 10 horas semanales en tareas repetitivas
                             </h1>
                         </div>
                         <div className="animate-fade-in-up" style={{ animationDelay: '0.4s', animationFillMode: 'backwards' }}>
                             <p className="text-lg md:text-xl text-slate-300 max-w-xl mx-auto lg:mx-0 mb-8">
-                                Consultoría especializada en implementación de inteligencia artificial para organizaciones y profesionales. Te capacitamos para aprovechar ChatGPT, Claude, Gemini y otras IAs con estándares de seguridad, calidad y medición de impacto.
+                                Ayudamos a consultoras y agencias a automatizar procesos de facturación, reporting y gestión de clientes usando IA. Recupera tu tiempo para hacer crecer tu negocio, no para gestionarlo.
                             </p>
                             <div className="flex gap-4 justify-center lg:justify-start flex-wrap">
                                 <a href="#contacto" className="px-8 py-4 rounded-full font-bold text-white bg-gradient-to-r from-cyan-500 to-blue-600 hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/30 transform transition-all duration-300">
-                                    Consultoría 150€
+                                    Solicitar Consultoría 150€
                                 </a>
                                 <a href="#servicios" className="px-8 py-4 rounded-full font-bold text-cyan-400 border-2 border-cyan-400 hover:bg-cyan-400 hover:text-[#0a0e27] transform transition-all duration-300">
                                     Ver Servicios
