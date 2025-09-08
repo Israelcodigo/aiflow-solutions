@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { LinkIcon, DocumentTextIcon, AcademicCapIcon, CheckCircleIcon, ShoppingCartIcon } from './icons/Icons';
+import { LightbulbIcon, RobotIcon, BoltIcon, LinkIcon, DocumentTextIcon, AcademicCapIcon, CheckCircleIcon, ShoppingCartIcon } from './icons/Icons';
 import ServiceModal from './ServiceModal';
 import ShoppingCart, { CartItem } from './ShoppingCart';
 import { trackServiceInteraction, trackCTAClick } from '../src/utils/analytics';
@@ -8,7 +8,7 @@ import { trackServiceInteraction, trackCTAClick } from '../src/utils/analytics';
 const servicesData = [
     {
         id: "consultoria-ia",
-        icon: <img src="/images/consultoria-demo.gif" alt="Demostración de consultoría IA en acción" className="w-12 h-12 object-cover rounded-lg" loading="lazy" />,
+        icon: <LightbulbIcon />,
         title: "Consultoría IA",
         description: "Auditoría técnica de 2 horas que identifica oportunidades de automatización de procesos para pymes, reduciendo hasta 20 horas semanales de trabajo manual y aumentando la productividad un 40%.",
         price: "150 € por sesión",
@@ -23,7 +23,7 @@ const servicesData = [
     },
     {
         id: "gpts-personalizados",
-        icon: <img src="/images/gpt-demo.gif" alt="Demo de chatbot GPT personalizado funcionando" className="w-12 h-12 object-cover rounded-lg" loading="lazy" />,
+        icon: <RobotIcon />,
         title: "GPTs Personalizados",
         description: "Chatbots para ecommerce y asistentes IA personalizados que automatizan atención al cliente, reducen tiempos de respuesta un 85% y aumentan conversiones hasta un 25%.",
         price: "149 € por GPT",
@@ -36,7 +36,7 @@ const servicesData = [
     },
     {
         id: "automatizaciones",
-        icon: <img src="/images/automation-demo.gif" alt="Automatización de procesos en tiempo real" className="w-12 h-12 object-cover rounded-lg" loading="lazy" />,
+        icon: <BoltIcon />,
         title: "Automatizaciones",
         description: "Automatización de procesos administrativos conectando email, CRM y ERP. Elimina tareas repetitivas, reduce errores un 90% y acelera ciclos operativos ahorrando 30+ horas mensuales.",
         price: "Desde 349 €/mes",
@@ -221,7 +221,7 @@ const Services: React.FC = () => {
                             <article
                                 key={service.id}
                                 className={`service-card bg-[#111a2e] border border-slate-700/60 rounded-3xl overflow-hidden h-full flex flex-col transition-all duration-700 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
-                                style={{ transitionDelay: `${index * 100}ms` }}
+                                style={{ transitionDelay: `${index * 150}ms` }}
                                 tabIndex={0}
                                 role="article"
                                 aria-labelledby={`service-${service.id}-title`}
