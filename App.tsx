@@ -5,7 +5,6 @@ import Hero from './components/Hero';
 import IntroSection from './components/IntroSection';
 import Services from './components/Services';
 import Pricing from './components/Pricing';
-import Process from './components/Process';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Blog from './components/Blog';
@@ -22,7 +21,6 @@ const App: React.FC = () => {
         <IntroSection />
         <Services />
         <Pricing />
-        <Process />
         <About />
         <Blog />
         <Contact />
