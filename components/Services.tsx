@@ -220,7 +220,7 @@ const Services: React.FC = () => {
                         {servicesData.map((service, index) => (
                             <article
                                 key={service.id}
-                                className={`service-card bg-[#111a2e] border border-slate-700/60 rounded-3xl overflow-hidden h-full flex flex-col transition-all duration-700 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+                                className={`service-card bg-[#111a2e] border border-slate-700/60 rounded-3xl overflow-hidden h-full flex flex-col ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
                                 style={{ transitionDelay: `${index * 150}ms` }}
                                 tabIndex={0}
                                 role="article"
