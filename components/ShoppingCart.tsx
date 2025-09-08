@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { XIcon, PlusIcon, MinusIcon, TrashIcon } from './icons/Icons';
 
 export type CartItem = {
@@ -21,8 +22,8 @@ const ShoppingCart: React.FC<ShoppingCartProps> = ({
   isOpen,
   items,
   onClose,
-  onUpdateQuantity,
   onRemoveItem,
+  onUpdateQuantity,
 }) => {
   const totalPrice = items.reduce((sum, item) => sum + item.priceNumeric * item.quantity, 0);
 

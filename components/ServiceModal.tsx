@@ -1,6 +1,12 @@
 import React, { useEffect } from 'react';
-import { CheckCircleIcon, XIcon } from './icons/Icons';
+
 import type { IconProps } from './icons/Icons';
+
+import { CheckCircleIcon, XIcon } from './icons/Icons';
+
+
+
+
 
 type Service = {
   icon: React.ReactElement<IconProps>;
@@ -15,7 +21,7 @@ type ServiceModalProps = {
   onClose: () => void;
 };
 
-const ServiceModal: React.FC<ServiceModalProps> = ({ service, onClose }) => {
+const ServiceModal: React.FC<ServiceModalProps> = ({ onClose, service }) => {
   useEffect(() => {
     const handleEscapeKey = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {

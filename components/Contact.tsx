@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
+
 import { trackFormSubmission, trackEvent } from '../src/utils/analytics';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
-    name: '',
     company: '',
     email: '',
-    message: '',
     honeypot: '', // Campo oculto anti-spam
+    message: '',
+    name: '',
   });
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
   const [statusMessage, setStatusMessage] = useState('');
@@ -27,11 +28,11 @@ const Contact: React.FC = () => {
 
     try {
       const response = await fetch(endpoint, {
-        method: 'POST',
+        body: JSON.stringify(formData),
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        method: 'POST',
       });
 
       const result = await response.json();
@@ -39,7 +40,7 @@ const Contact: React.FC = () => {
       if (response.ok && result.success) {
         setStatus('success');
         setStatusMessage(result.message || '¡Gracias por tu interés! Te contactaremos pronto.');
-        setFormData({ name: '', company: '', email: '', message: '', honeypot: '' });
+        setFormData({ company: '', email: '', honeypot: '', message: '', name: '' });
 
         // 📊 Track successful form submission
         trackFormSubmission(true, 'contact');
@@ -57,9 +58,9 @@ const Contact: React.FC = () => {
 
       // 📊 Track network error
       trackEvent('form_error', {
+        error_message: error instanceof Error ? error.message : 'Unknown error',
         event_category: 'error',
         event_label: 'network_error',
-        error_message: error instanceof Error ? error.message : 'Unknown error',
       });
     }
   };

@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+
 import {
   LightbulbIcon,
   RobotIcon,
@@ -6,23 +7,17 @@ import {
   LinkIcon,
   DocumentTextIcon,
   AcademicCapIcon,
-  CheckCircleIcon,
   ShoppingCartIcon,
 } from './icons/Icons';
 import ServiceModal from './ServiceModal';
 import ShoppingCart, { CartItem } from './ShoppingCart';
-import { trackServiceInteraction, trackCTAClick } from '../src/utils/analytics';
+import { trackServiceInteraction } from '../src/utils/analytics';
 
 // Datos de servicios normalizados con formato de precios consistente
 const servicesData = [
   {
-    id: 'consultoria-ia',
-    icon: <LightbulbIcon />,
-    title: 'Consultoría IA',
     description:
       'Auditoría técnica de 2 horas que identifica oportunidades de automatización de procesos para pymes, reduciendo hasta 20 horas semanales de trabajo manual y aumentando la productividad un 40%.',
-    price: '150 € por sesión',
-    priceNumeric: 150,
     details: [
       'Análisis profundo de flujos de trabajo.',
       'Hoja de ruta de implementación personalizada.',
@@ -30,79 +25,84 @@ const servicesData = [
       'Metodología específica para medir el impacto obtenido.',
       'Recomendación de herramientas y plataformas.',
     ],
+    icon: <LightbulbIcon />,
+    id: 'consultoria-ia',
+    price: '150 € por sesión',
+    priceNumeric: 150,
+    title: 'Consultoría IA',
   },
   {
-    id: 'gpts-personalizados',
-    icon: <RobotIcon />,
-    title: 'GPTs Personalizados',
     description:
       'Chatbots para ecommerce y asistentes IA personalizados que automatizan atención al cliente, reducen tiempos de respuesta un 85% y aumentan conversiones hasta un 25%.',
-    price: '149 € por GPT',
-    priceNumeric: 149,
     details: [
       'Basado en tus documentos y base de conocimientos.',
       'Integración con tus sistemas existentes.',
       'Optimizado para tareas específicas: ventas, soporte, etc.',
     ],
+    icon: <RobotIcon />,
+    id: 'gpts-personalizados',
+    price: '149 € por GPT',
+    priceNumeric: 149,
+    title: 'GPTs Personalizados',
   },
   {
-    id: 'automatizaciones',
-    icon: <BoltIcon />,
-    title: 'Automatizaciones',
     description:
       'Automatización de procesos administrativos conectando email, CRM y ERP. Elimina tareas repetitivas, reduce errores un 90% y acelera ciclos operativos ahorrando 30+ horas mensuales.',
-    price: 'Desde 349 €/mes',
-    priceNumeric: 349,
     details: [
       'Producto diseñado completamente para cumplir con las necesidades específicas del cliente.',
       'No incluye ninguna función específica de base.',
       'Workflows personalizados con herramientas como Zapier o Make.',
       'Solución a medida según los requerimientos del negocio.',
     ],
+    icon: <BoltIcon />,
+    id: 'automatizaciones',
+    price: 'Desde 349 €/mes',
+    priceNumeric: 349,
+    title: 'Automatizaciones',
   },
   {
-    id: 'integracion-mcp',
-    icon: <LinkIcon />,
-    title: 'Integración MCP',
     description:
       'Conecta ChatGPT o Claude con Slack, Google Drive y más mediante Model Context Protocol (MCP) para contexto en tiempo real.',
-    price: '299 € instalación',
-    priceNumeric: 299,
     details: [
       'Consultas directas a la IA desde Slack.',
       'Resumen y análisis de documentos en Google Drive.',
       'Desarrollo completo del MCP según necesidades.',
       'Configuración de seguridad y permisos de acceso.',
     ],
+    icon: <LinkIcon />,
+    id: 'integracion-mcp',
+    price: '299 € instalación',
+    priceNumeric: 299,
+    title: 'Integración MCP',
   },
   {
-    id: 'pack-prompts-pro',
-    icon: <DocumentTextIcon />,
-    title: 'Pack Prompts Pro',
     description: 'Kits de prompts por sector con guías y ejemplos listos para uso profesional.',
-    price: '99 € por pack',
-    priceNumeric: 99,
     details: [
       'Creados específicamente para los últimos modelos de IA.',
       'Optimizados para GPT-5, Claude Opus, Sonnet y Gemini 2.5 Pro.',
       'Diseñados para cada propósito específico que solicite el cliente.',
       'No son genéricos sino completamente personalizados.',
     ],
+    icon: <DocumentTextIcon />,
+    id: 'pack-prompts-pro',
+    price: '99 € por pack',
+    priceNumeric: 99,
+    title: 'Pack Prompts Pro',
   },
   {
-    id: 'formacion',
-    icon: <AcademicCapIcon />,
-    title: 'Formación',
     description:
       'Programas de capacitación práctica en ChatGPT, Claude y otras IAs. Itinerarios por nivel y sector.',
-    price: 'Desde 89 €/hora',
-    priceNumeric: 89,
     details: [
       'Sesiones prácticas con casos de uso reales.',
       'Material didáctico y guías de referencia.',
       'Enfoque en seguridad y uso ético de la IA.',
       'Formación práctica sin certificación educativa oficial.',
     ],
+    icon: <AcademicCapIcon />,
+    id: 'formacion',
+    price: 'Desde 89 €/hora',
+    priceNumeric: 89,
+    title: 'Formación',
   },
 ];
 
@@ -125,10 +125,10 @@ const Services: React.FC = () => {
     } else {
       const newItem: CartItem = {
         id: service.id,
-        title: service.title,
         price: service.price,
         priceNumeric: service.priceNumeric,
         quantity: 1,
+        title: service.title,
       };
       setCartItems([...cartItems, newItem]);
     }
@@ -163,8 +163,8 @@ const Services: React.FC = () => {
         }
       },
       {
-        threshold: 0.1,
         rootMargin: '50px',
+        threshold: 0.1,
       },
     );
 
@@ -248,8 +248,8 @@ const Services: React.FC = () => {
                   {/* Icon */}
                   <div className="service-icon text-cyan-400 mb-6 flex-shrink-0">
                     {React.cloneElement(service.icon, {
-                      className: 'w-12 h-12',
                       'aria-hidden': 'true',
+                      className: 'w-12 h-12',
                     })}
                   </div>
 

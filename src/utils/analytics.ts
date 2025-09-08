@@ -34,9 +34,9 @@ export const trackFormSubmission = (success: boolean, formType: string = 'contac
 // Tracking de interacciones con servicios
 export const trackServiceInteraction = (serviceName: string, action: string, price?: number) => {
   trackEvent('service_interaction', {
+    action: action,
     event_category: 'services',
     event_label: serviceName,
-    action: action,
     value: price || 0,
   });
 };
@@ -50,19 +50,3 @@ export const trackCTAClick = (ctaText: string, location: string) => {
   });
 };
 
-// Tracking de scroll depth (usuario engaged)
-export const trackScrollDepth = (percentage: number) => {
-  trackEvent('scroll', {
-    event_category: 'engagement',
-    event_label: `${percentage}%`,
-    value: percentage,
-  });
-};
-
-// Tracking de tiempo en página (engagement)
-export const trackTimeOnPage = (seconds: number) => {
-  trackEvent('timing_complete', {
-    name: 'time_on_page',
-    value: seconds,
-  });
-};

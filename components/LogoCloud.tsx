@@ -5,22 +5,22 @@ const LogoCloud: React.FC = () => {
 
   const logos = [
     {
-      src: '/images/chatgpt.png',
+      alt: 'Logo de ChatGPT - Inteligencia Artificial conversacional de OpenAI',
       fallback: '/images/chatgpt-optimized.svg',
       name: 'ChatGPT',
-      alt: 'Logo de ChatGPT - Inteligencia Artificial conversacional de OpenAI',
+      src: '/images/chatgpt.png',
     },
     {
-      src: '/images/claude.png',
+      alt: 'Logo de Claude - Asistente de IA de Anthropic',
       fallback: '/images/claude-optimized.svg',
       name: 'Claude',
-      alt: 'Logo de Claude - Asistente de IA de Anthropic',
+      src: '/images/claude.png',
     },
     {
-      src: '/images/gemini.png', // Use real Gemini logo PNG
+      alt: 'Logo de Gemini - IA multimodal de Google',
       fallback: '/images/gemini-optimized.svg',
       name: 'Gemini',
-      alt: 'Logo de Gemini - IA multimodal de Google',
+      src: '/images/gemini.png', // Use real Gemini logo PNG
     },
   ];
 

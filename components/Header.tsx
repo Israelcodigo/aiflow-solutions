@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+
 import { MenuIcon, XIcon } from './icons/Icons';
 
 const Header: React.FC = () => {

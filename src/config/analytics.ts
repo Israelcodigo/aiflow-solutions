@@ -1,8 +1,8 @@
 // Configuración de Google Analytics
-export const GA4_MEASUREMENT_ID = import.meta.env.VITE_GA4_MEASUREMENT_ID || 'G-PLACEHOLDER123';
+const GA4_MEASUREMENT_ID = import.meta.env.VITE_GA4_MEASUREMENT_ID || 'G-PLACEHOLDER123';
 
-// Verificar si estamos en desarrollo
-export const isDevelopment = import.meta.env.MODE === 'development';
+// Verificar si estamos en desarrollo  
+const isDevelopment = import.meta.env.MODE === 'development';
 
 // Script de Google Analytics dinámico
 export const initializeGA4 = () => {
@@ -28,8 +28,8 @@ export const initializeGA4 = () => {
 
   gtag('js', new Date());
   gtag('config', GA4_MEASUREMENT_ID, {
-    page_title: document.title,
     page_location: window.location.href,
+    page_title: document.title,
     send_page_view: true,
   });
 

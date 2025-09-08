@@ -163,31 +163,6 @@ export const XIcon: React.FC<IconProps> = ({ className = 'w-6 h-6' }) => (
   </svg>
 );
 
-export const ClaudeLogo: React.FC<IconProps> = ({ className }) => (
-  <svg
-    className={className}
-    viewBox="0 0 24 24"
-    fill="currentColor"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path
-      fillRule="evenodd"
-      d="M6 4h12a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8a4 4 0 0 1 4-4zm6 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"
-      clipRule="evenodd"
-    />
-  </svg>
-);
-
-export const GeminiLogo: React.FC<IconProps> = ({ className }) => (
-  <svg
-    className={className}
-    viewBox="0 0 24 24"
-    fill="currentColor"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path d="M12 2.5l1.91 4.59L18.5 9l-4.59 1.91L12 15.5l-1.91-4.59L5.5 9l4.59-1.91L12 2.5zm0 9l1.27 3.07L16.34 16l-3.07 1.27L12 20.34l-1.27-3.07L7.66 16l3.07-1.27L12 11.5z" />
-  </svg>
-);
 
 export const ShoppingCartIcon: React.FC<IconProps> = ({ className = 'w-6 h-6' }) => (
   <svg

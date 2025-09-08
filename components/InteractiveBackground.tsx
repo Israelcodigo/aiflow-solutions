@@ -24,9 +24,9 @@ const InteractiveBackground: React.FC = () => {
         className="absolute inset-0"
         style={{
           background: 'linear-gradient(135deg, #0a0f1f 0%, #0d1a2e 35%, #0a1c3c 70%, #0a0f1f 100%)',
+          backgroundPosition: '0 0',
           backgroundRepeat: 'no-repeat',
           backgroundSize: '100% 100%',
-          backgroundPosition: '0 0',
         }}
       >
         {/* Subtle asymmetric glow overlay */}
@@ -93,8 +93,8 @@ const InteractiveBackground: React.FC = () => {
             filter="url(#gooey)"
             className={reduceMotion ? '' : 'animate-pulse'}
             style={{
-              animationDuration: '6s',
               animationDelay: '2s',
+              animationDuration: '6s',
               transformOrigin: 'center',
             }}
           />
@@ -109,10 +109,10 @@ const InteractiveBackground: React.FC = () => {
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
-          opacity: 0.03,
-          mixBlendMode: 'overlay',
           backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='1' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.5'/%3E%3C/svg%3E")`,
           backgroundSize: '200px 200px',
+          mixBlendMode: 'overlay',
+          opacity: 0.03,
         }}
       ></div>
 
@@ -130,13 +130,13 @@ const InteractiveBackground: React.FC = () => {
               key={i}
               className="absolute rounded-full bg-cyan-300/60 animate-sparkle will-change-transform"
               style={{
-                width: `${size}px`,
-                height: `${size}px`,
-                top: `${top}%`,
-                left: `${left}%`,
-                animationDuration: `${duration}s`,
                 animationDelay: `${delay}s`,
+                animationDuration: `${duration}s`,
                 boxShadow: `0 0 ${size * 3}px 1px hsla(185, 100%, 60%, 0.4)`,
+                height: `${size}px`,
+                left: `${left}%`,
+                top: `${top}%`,
+                width: `${size}px`,
               }}
             />
           );

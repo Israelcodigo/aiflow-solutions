@@ -4,16 +4,9 @@ import { defineConfig, loadEnv } from 'vite';
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, '.', '');
   return {
-    define: {
-      'process.env.API_KEY': JSON.stringify(env.GEMINI_API_KEY),
-      'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY),
-    },
-    resolve: {
-      alias: {
-        '@': path.resolve(__dirname, '.'),
-      },
-    },
     build: {
+      assetsInlineLimit: 0, // No inline images for better caching
+      chunkSizeWarningLimit: 250, // Avisar si chunks > 250KB
       rollupOptions: {
         output: {
           assetFileNames: (assetInfo) => {
@@ -25,22 +18,29 @@ export default defineConfig(({ mode }) => {
             return `assets/[name]-[hash][extname]`;
           },
           manualChunks: {
+            interactive: ['./components/InteractiveBackground'],
             // React & React DOM como chunk separado
             'react-vendor': ['react', 'react-dom'],
-            // Analytics y utilidades como chunk separado
-            utils: ['./src/utils/analytics'],
             // Componentes pesados como chunks separados
             services: [
               './components/Services',
               './components/ServiceModal',
               './components/ShoppingCart',
             ],
-            interactive: ['./components/InteractiveBackground'],
+            // Analytics y utilidades como chunk separado
+            utils: ['./src/utils/analytics'],
           },
         },
       },
-      assetsInlineLimit: 0, // No inline images for better caching
-      chunkSizeWarningLimit: 250, // Avisar si chunks > 250KB
+    },
+    define: {
+      'process.env.API_KEY': JSON.stringify(env.GEMINI_API_KEY),
+      'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY),
+    },
+    resolve: {
+      alias: {
+        '@': path.resolve(__dirname, '.'),
+      },
     },
   };
 });

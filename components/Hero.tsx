@@ -1,22 +1,23 @@
 import React from 'react';
+
 import { BoltIcon, LightbulbIcon, AcademicCapIcon } from './icons/Icons';
 import LogoCloud from './LogoCloud';
 
 const keyBenefits = [
   {
+    delay: '1s',
     icon: <BoltIcon className="w-6 h-6" />,
     text: 'Automatización eficiente',
-    delay: '1s',
   },
   {
+    delay: '1.2s',
     icon: <LightbulbIcon className="w-6 h-6" />,
     text: 'Decisiones informadas',
-    delay: '1.2s',
   },
   {
+    delay: '1.4s',
     icon: <AcademicCapIcon className="w-6 h-6" />,
     text: 'Capacitación experta',
-    delay: '1.4s',
   },
 ];
 

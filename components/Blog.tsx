@@ -1,33 +1,34 @@
 import React from 'react';
+
 import { DocumentTextIcon, LightbulbIcon, CheckCircleIcon } from './icons/Icons';
 
 const blogPosts = [
   {
-    id: 1,
-    icon: <DocumentTextIcon className="w-8 h-8" />,
-    title: 'Guía completa: Cómo un chatbot puede reducir costes de atención al cliente',
+    category: 'Automatización',
     excerpt:
       'Descubre cómo implementar un chatbot eficaz que reduzca hasta un 60% los costes operativos mientras mejora la experiencia del usuario.',
+    icon: <DocumentTextIcon className="w-8 h-8" />,
+    id: 1,
     readTime: '5 min',
-    category: 'Automatización',
+    title: 'Guía completa: Cómo un chatbot puede reducir costes de atención al cliente',
   },
   {
-    id: 2,
-    icon: <LightbulbIcon className="w-8 h-8" />,
-    title: '5 tareas administrativas que puedes automatizar hoy mismo con IA',
+    category: 'Productividad',
     excerpt:
       'Identifica procesos repetitivos en tu empresa y aprende a automatizarlos para ahorrar hasta 15 horas semanales de trabajo manual.',
+    icon: <LightbulbIcon className="w-8 h-8" />,
+    id: 2,
     readTime: '4 min',
-    category: 'Productividad',
+    title: '5 tareas administrativas que puedes automatizar hoy mismo con IA',
   },
   {
-    id: 3,
-    icon: <CheckCircleIcon className="w-8 h-8" />,
-    title: 'Caso de éxito: Aumentando la eficiencia en retail con automatización',
+    category: 'Casos de Éxito',
     excerpt:
       'Análisis detallado de cómo una cadena retail aumentó sus ventas un 40% mediante automatización de procesos con IA.',
+    icon: <CheckCircleIcon className="w-8 h-8" />,
+    id: 3,
     readTime: '6 min',
-    category: 'Casos de Éxito',
+    title: 'Caso de éxito: Aumentando la eficiencia en retail con automatización',
   },
 ];
 

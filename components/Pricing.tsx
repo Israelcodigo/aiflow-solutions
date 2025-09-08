@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+
 import { CheckCircleIcon } from './icons/Icons';
 
 type Price = string | { monthly: number; annual: number };
@@ -16,10 +17,9 @@ type PricingPlan = {
 
 const pricingData: PricingPlan[] = [
   {
-    name: 'Servicios Únicos',
-    type: 'one-time',
-    price: 'Desde 89€',
+    cta: 'Ver Servicios',
     description: 'Soluciones cerradas para objetivos concretos.',
+    featured: false,
     features: [
       'Consultoría IA (150€/sesión)',
       'GPTs Personalizados (149€/GPT)',
@@ -27,52 +27,53 @@ const pricingData: PricingPlan[] = [
       'Pack Prompts Pro (99€/pack)',
       'Formación (Desde 89€/hora)',
     ],
-    featured: false,
-    cta: 'Ver Servicios',
     href: '#servicios',
+    name: 'Servicios Únicos',
+    price: 'Desde 89€',
+    type: 'one-time',
   },
   {
-    name: 'Automatización con IA',
-    type: 'subscription',
-    price: { monthly: 349, annual: 3769 },
+    cta: 'Empezar a Automatizar',
     description:
       'Diseñamos un sistema que automatiza un proceso repetitivo con IA. ROI promedio del 400% en 6 meses.',
+    featured: true,
     features: [
       'Ahorro garantizado: mín. 10h/semana o reembolso 100%',
       'Operación 24/7 sin interrupciones',
       'Gestión integral de la complejidad técnica',
       'Soporte y mantenimiento 30 días incluidos',
     ],
-    featured: true,
-    cta: 'Empezar a Automatizar',
     href: '#contacto',
+    name: 'Automatización con IA',
+    price: { annual: 3769, monthly: 349 },
+    type: 'subscription',
   },
   {
-    name: 'Plan Empresa',
-    type: 'custom',
-    price: 'Personalizado',
+    cta: 'Contactar',
     description: 'Soluciones a medida y formación avanzada para tu organización.',
+    featured: false,
     features: [
       'Incluye todo lo del plan de suscripción y, además: múltiples soluciones, automatizaciones a gran escala, formación para equipos completos, soporte técnico dedicado, consultoría estratégica ilimitada.',
     ],
-    featured: false,
-    cta: 'Contactar',
     href: '#contacto',
+    name: 'Plan Empresa',
+    price: 'Personalizado',
+    type: 'custom',
   },
 ];
 
 type BillingCycle = 'monthly' | 'annual';
 
 const PricingCard: React.FC<PricingPlan & { billingCycle: BillingCycle }> = ({
-  name,
-  type,
-  price,
-  description,
-  features,
-  featured,
-  cta,
-  href,
   billingCycle,
+  cta,
+  description,
+  featured,
+  features,
+  href,
+  name,
+  price,
+  type,
 }) => {
   const displayPrice = () => {
     if (type === 'subscription') {
