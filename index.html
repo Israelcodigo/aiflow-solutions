@@ -248,13 +248,25 @@
         }
     }
 
-    /* Enhanced Service Card Styles - Original Cyan/Blue */
+    /* Enhanced Service Card Styles - Separated transitions */
     .service-card {
+        /* Hover transitions - instant */
         transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), 
                     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
-                    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-                    opacity 700ms ease-out;
+                    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
         transform-origin: center;
+    }
+    
+    /* Initial appearance transition - separate from hover */
+    .service-card.opacity-0 {
+        transition: opacity 700ms ease-out, transform 700ms ease-out;
+    }
+    
+    .service-card.opacity-100 {
+        transition: opacity 700ms ease-out, transform 700ms ease-out,
+                    transform 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+                    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     .service-card:hover {

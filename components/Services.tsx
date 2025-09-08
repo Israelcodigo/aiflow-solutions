@@ -221,7 +221,10 @@ const Services: React.FC = () => {
                             <article
                                 key={service.id}
                                 className={`service-card bg-[#111a2e] border border-slate-700/60 rounded-3xl overflow-hidden h-full flex flex-col ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
-                                style={{ transitionDelay: `${index * 150}ms` }}
+                                style={{ 
+                                    '--appear-delay': `${index * 150}ms`,
+                                    transitionDelay: isVisible ? '0ms' : `${index * 150}ms`
+                                } as React.CSSProperties}
                                 tabIndex={0}
                                 role="article"
                                 aria-labelledby={`service-${service.id}-title`}
