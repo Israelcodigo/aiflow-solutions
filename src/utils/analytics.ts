@@ -13,7 +13,7 @@ export const trackEvent = (eventName: string, parameters?: Record<string, any>) 
   if (typeof window !== 'undefined' && window.gtag) {
     window.gtag('event', eventName, {
       event_category: 'engagement',
-      ...parameters
+      ...parameters,
     });
     console.log('📊 GA4 Event:', eventName, parameters);
   } else {
@@ -37,7 +37,7 @@ export const trackServiceInteraction = (serviceName: string, action: string, pri
     event_category: 'services',
     event_label: serviceName,
     action: action,
-    value: price || 0
+    value: price || 0,
   });
 };
 
@@ -46,7 +46,7 @@ export const trackCTAClick = (ctaText: string, location: string) => {
   trackEvent('cta_click', {
     event_category: 'conversion',
     event_label: ctaText,
-    location: location
+    location: location,
   });
 };
 
@@ -55,7 +55,7 @@ export const trackScrollDepth = (percentage: number) => {
   trackEvent('scroll', {
     event_category: 'engagement',
     event_label: `${percentage}%`,
-    value: percentage
+    value: percentage,
   });
 };
 
@@ -63,6 +63,6 @@ export const trackScrollDepth = (percentage: number) => {
 export const trackTimeOnPage = (seconds: number) => {
   trackEvent('timing_complete', {
     name: 'time_on_page',
-    value: seconds
+    value: seconds,
   });
 };

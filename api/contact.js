@@ -25,8 +25,8 @@ export default async function handler(req, res) {
 
   // Validación básica
   if (!name || !email || !message) {
-    return res.status(400).json({ 
-      error: 'Faltan campos obligatorios: nombre, email y mensaje son requeridos' 
+    return res.status(400).json({
+      error: 'Faltan campos obligatorios: nombre, email y mensaje son requeridos',
     });
   }
 
@@ -46,7 +46,7 @@ export default async function handler(req, res) {
     name,
     email: email.substring(0, 3) + '***', // Email parcialmente oculto en logs
     company: company || 'N/A',
-    messageLength: message.length
+    messageLength: message.length,
   });
 
   try {
@@ -68,36 +68,36 @@ export default async function handler(req, res) {
     const response = await fetch(formSubmitUrl, {
       method: 'POST',
       headers: {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
-        'Referer': 'https://aiflow-solutions.vercel.app/',
-        'Origin': 'https://aiflow-solutions.vercel.app'
+        'User-Agent':
+          'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
+        Referer: 'https://aiflow-solutions.vercel.app/',
+        Origin: 'https://aiflow-solutions.vercel.app',
       },
-      body: formData
+      body: formData,
     });
 
     if (response.ok) {
-      return res.status(200).json({ 
-        success: true, 
-        message: '¡Gracias por tu interés! Te contactaremos en menos de 24 horas.' 
+      return res.status(200).json({
+        success: true,
+        message: '¡Gracias por tu interés! Te contactaremos en menos de 24 horas.',
       });
     } else {
       throw new Error(`FormSubmit failed with status: ${response.status}`);
     }
-
   } catch (error) {
     console.error('❌ Error enviando email:', error);
-    
+
     // Fallback: al menos loggear el contacto para no perderlo
     console.log('📝 CONTACTO PERDIDO - Guardar manualmente:', {
       timestamp: new Date().toISOString(),
       name,
       email,
       company,
-      message: message.substring(0, 100) + '...'
+      message: message.substring(0, 100) + '...',
     });
 
-    return res.status(500).json({ 
-      error: 'Error interno del servidor. Por favor, inténtalo más tarde o contacta directamente.' 
+    return res.status(500).json({
+      error: 'Error interno del servidor. Por favor, inténtalo más tarde o contacta directamente.',
     });
   }
 }

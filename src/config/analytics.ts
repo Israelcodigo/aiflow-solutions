@@ -7,7 +7,7 @@ export const isDevelopment = import.meta.env.MODE === 'development';
 // Script de Google Analytics dinámico
 export const initializeGA4 = () => {
   if (typeof window === 'undefined') return;
-  
+
   // Solo cargar GA4 en producción o si la variable está configurada
   if (isDevelopment && GA4_MEASUREMENT_ID === 'G-PLACEHOLDER123') {
     console.log('🔧 GA4 en modo desarrollo - usando placeholder');
@@ -25,12 +25,12 @@ export const initializeGA4 = () => {
   function gtag(...args: any[]) {
     window.dataLayer.push(args);
   }
-  
+
   gtag('js', new Date());
   gtag('config', GA4_MEASUREMENT_ID, {
     page_title: document.title,
     page_location: window.location.href,
-    send_page_view: true
+    send_page_view: true,
   });
 
   // Hacer gtag disponible globalmente

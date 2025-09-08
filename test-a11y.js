@@ -10,10 +10,12 @@ console.log('🔍 Iniciando auditoría de accesibilidad y rendimiento...\n');
 
 // Test 1: Verify image optimization
 const publicImagesDir = path.join(__dirname, 'public', 'images');
-const images = fs.readdirSync(publicImagesDir).filter(file => file.endsWith('.png') || file.endsWith('.svg'));
+const images = fs
+  .readdirSync(publicImagesDir)
+  .filter((file) => file.endsWith('.png') || file.endsWith('.svg'));
 
 console.log('📊 Análisis de assets:');
-images.forEach(image => {
+images.forEach((image) => {
   const imagePath = path.join(publicImagesDir, image);
   const stats = fs.statSync(imagePath);
   const sizeKB = (stats.size / 1024).toFixed(2);
@@ -34,7 +36,7 @@ const checks = [
   { test: /aria-label|role=/i.test(htmlContent), msg: 'Atributos ARIA encontrados' },
 ];
 
-checks.forEach(check => {
+checks.forEach((check) => {
   console.log(`  ${check.test ? '✅' : '❌'} ${check.msg}`);
 });
 
@@ -51,7 +53,7 @@ const logoChecks = [
   { test: /role=/.test(logoCloudContent), msg: 'Roles ARIA definidos' },
 ];
 
-logoChecks.forEach(check => {
+logoChecks.forEach((check) => {
   console.log(`  ${check.test ? '✅' : '❌'} ${check.msg}`);
 });
 

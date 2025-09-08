@@ -1,0 +1,12 @@
+
+> deified-machines@0.0.0 depcheck
+> depcheck --skip-missing=true
+
+Unused devDependencies
+* @tailwindcss/forms
+* @tailwindcss/postcss
+* @tailwindcss/typography
+* autoprefixer
+* dependency-cruiser
+* postcss
+* tailwindcss

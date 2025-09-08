@@ -1,0 +1,22 @@
+
+> deified-machines@0.0.0 deadcode
+> knip
+
+[93m[4mUnused files[24m[39m (3)
+test-a11y.js            
+api/contact.js          
+components/Process.tsx  
+[93m[4mUnlisted dependencies[24m[39m (1)
+@eslint/js  eslint.config.js
+[93m[4mUnused exports[24m[39m (6)
+GA4_MEASUREMENT_ID  src/config/analytics.ts:2:14    
+isDevelopment       src/config/analytics.ts:5:14    
+ClaudeLogo          components/icons/Icons.tsx:64:14
+GeminiLogo          components/icons/Icons.tsx:70:14
+trackScrollDepth    src/utils/analytics.ts:54:14    
+trackTimeOnPage     src/utils/analytics.ts:63:14    
+[33m[4mConfiguration hints[24m (4)[39m
+@tailwindcss/postcss    knip.json  [90mRemove from [97mignoreDependencies[90m[39m
+autoprefixer            knip.json  [90mRemove from [97mignoreDependencies[90m[39m
+postcss                 knip.json  [90mRemove from [97mignoreDependencies[90m[39m
+tailwindcss             knip.json  [90mRemove from [97mignoreDependencies[90m[39m

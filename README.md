@@ -27,7 +27,7 @@ npm install
 # Desarrollo
 npm run dev        # http://localhost:5173
 
-# Producción  
+# Producción
 npm run build      # Genera dist/
 npm run preview    # Preview del build
 ```
@@ -35,7 +35,7 @@ npm run preview    # Preview del build
 ## Servicios Ofrecidos
 
 1. **Consultoría IA** (150€/sesión) - Auditoría técnica 2h
-2. **GPTs Personalizados** (149€/GPT) - Asistentes IA custom  
+2. **GPTs Personalizados** (149€/GPT) - Asistentes IA custom
 3. **Automatizaciones** (Desde 349€/mes) - Flujos CRM/ERP
 4. **Integración MCP** (299€) - ChatGPT/Claude + Slack
 5. **Pack Prompts Pro** (99€/pack) - Prompts sectoriales
@@ -44,7 +44,7 @@ npm run preview    # Preview del build
 ## Stack Técnico
 
 - **Frontend**: React 19.1.1, TypeScript, Tailwind CSS
-- **Build**: Vite 6.2.0, optimización assets  
+- **Build**: Vite 6.2.0, optimización assets
 - **Forms**: FormSubmit.co (sin backend necesario)
 - **Deploy**: Vercel auto-deploy
 - **Icons**: SVG inline custom library
@@ -56,7 +56,7 @@ components/
 ├── Services.tsx      # Catálogo + carrito (core business)
 ├── Contact.tsx       # Lead generation form
 ├── ShoppingCart.tsx  # E-commerce demo
-├── Header.tsx        # Navigation responsive  
+├── Header.tsx        # Navigation responsive
 ├── Hero.tsx          # Landing section
 └── ...               # Pricing, Process, Footer
 

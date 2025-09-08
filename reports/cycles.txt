@@ -1,0 +1,9 @@
+
+> deified-machines@0.0.0 cycles
+> madge --circular --extensions ts,tsx,js,jsx .
+
+- Finding files
+Processed 36 files (1.3s) (3 warnings)
+
+✔ No circular dependency found!
+

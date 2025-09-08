@@ -1,36 +1,39 @@
-
 import React, { useState } from 'react';
 
 const LogoCloud: React.FC = () => {
   const [imageErrors, setImageErrors] = useState<Set<string>>(new Set());
 
   const logos = [
-    { 
+    {
       src: '/images/chatgpt.png',
       fallback: '/images/chatgpt-optimized.svg',
-      name: 'ChatGPT', 
-      alt: 'Logo de ChatGPT - Inteligencia Artificial conversacional de OpenAI'
+      name: 'ChatGPT',
+      alt: 'Logo de ChatGPT - Inteligencia Artificial conversacional de OpenAI',
     },
-    { 
+    {
       src: '/images/claude.png',
       fallback: '/images/claude-optimized.svg',
-      name: 'Claude', 
-      alt: 'Logo de Claude - Asistente de IA de Anthropic'
+      name: 'Claude',
+      alt: 'Logo de Claude - Asistente de IA de Anthropic',
     },
-    { 
+    {
       src: '/images/gemini.png', // Use real Gemini logo PNG
       fallback: '/images/gemini-optimized.svg',
-      name: 'Gemini', 
-      alt: 'Logo de Gemini - IA multimodal de Google'
+      name: 'Gemini',
+      alt: 'Logo de Gemini - IA multimodal de Google',
     },
   ];
 
   const handleImageError = (logoName: string) => {
-    setImageErrors(prev => new Set(prev).add(logoName));
+    setImageErrors((prev) => new Set(prev).add(logoName));
   };
 
   return (
-    <div className="w-full max-w-2xl flex justify-around items-center gap-16 py-8" role="img" aria-label="Logos de plataformas de inteligencia artificial soportadas">
+    <div
+      className="w-full max-w-2xl flex justify-around items-center gap-16 py-8"
+      role="img"
+      aria-label="Logos de plataformas de inteligencia artificial soportadas"
+    >
       {logos.map((logo, index) => (
         <div
           key={logo.name}
@@ -40,18 +43,18 @@ const LogoCloud: React.FC = () => {
         >
           {/* Solo el logo, sin fondo de tarjeta */}
           <div className="relative flex items-center justify-center transition-all duration-300 transform group-hover:scale-110 group-hover:-translate-y-1">
-            <img 
+            <img
               src={imageErrors.has(logo.name) ? logo.fallback : logo.src}
               alt={logo.alt}
               className={`object-contain filter drop-shadow-lg transition-all duration-300 group-hover:drop-shadow-2xl group-hover:brightness-110 ${
-                logo.name === 'ChatGPT' || logo.name === 'Claude' 
-                  ? 'h-28 w-28 md:h-36 md:w-36' 
+                logo.name === 'ChatGPT' || logo.name === 'Claude'
+                  ? 'h-28 w-28 md:h-36 md:w-36'
                   : 'h-24 w-24 md:h-32 md:w-32'
               }`}
               loading="lazy"
               decoding="async"
-              width={logo.name === 'ChatGPT' || logo.name === 'Claude' ? "144" : "128"}
-              height={logo.name === 'ChatGPT' || logo.name === 'Claude' ? "144" : "128"}
+              width={logo.name === 'ChatGPT' || logo.name === 'Claude' ? '144' : '128'}
+              height={logo.name === 'ChatGPT' || logo.name === 'Claude' ? '144' : '128'}
               onError={() => handleImageError(logo.name)}
             />
           </div>
