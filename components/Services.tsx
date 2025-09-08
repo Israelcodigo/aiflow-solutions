@@ -17,92 +17,97 @@ import { trackServiceInteraction } from '../src/utils/analytics';
 const servicesData = [
   {
     description:
-      'Auditoría técnica de 2 horas que identifica oportunidades de automatización de procesos para pymes, reduciendo hasta 20 horas semanales de trabajo manual y aumentando la productividad un 40%.',
+      'Identifica exactamente dónde tu empresa pierde tiempo en tareas manuales. Auditamos tus procesos actuales y te mostramos cómo automatizar hasta 20 horas semanales, aumentando productividad un 40%.',
     details: [
-      'Análisis profundo de flujos de trabajo.',
-      'Hoja de ruta de implementación personalizada.',
-      'Estimación de ROI y métricas de éxito.',
+      'Análisis profundo de flujos de trabajo actuales.',
+      'Hoja de ruta de implementación personalizada por prioridad.',
+      'Estimación precisa de ROI y ahorro de tiempo.',
       'Metodología específica para medir el impacto obtenido.',
-      'Recomendación de herramientas y plataformas.',
+      'Recomendación de herramientas y plataformas optimizadas.',
     ],
     icon: <LightbulbIcon />,
     id: 'consultoria-ia',
     price: '150 € por sesión',
     priceNumeric: 150,
-    title: 'Consultoría IA',
+    title: 'Auditoría de Procesos Automatizables',
   },
   {
     description:
-      'Chatbots para ecommerce y asistentes IA personalizados que automatizan atención al cliente, reducen tiempos de respuesta un 85% y aumentan conversiones hasta un 25%.',
+      'Reduce el tiempo de atención al cliente un 85% y aumenta conversiones un 25% con asistentes IA que conocen tu negocio. Responden consultas 24/7 con la misma calidad que tu equipo.',
     details: [
-      'Basado en tus documentos y base de conocimientos.',
-      'Integración con tus sistemas existentes.',
-      'Optimizado para tareas específicas: ventas, soporte, etc.',
+      'Entrenado con tus documentos, políticas y base de conocimientos.',
+      'Integración directa con tu CRM, WhatsApp y sistemas existentes.',
+      'Optimizado para ventas, soporte técnico, reservas o consultas.',
+      'Dashboard para monitorear conversaciones y mejorar respuestas.',
     ],
     icon: <RobotIcon />,
     id: 'gpts-personalizados',
-    price: '149 € por GPT',
+    price: '149 € por asistente',
     priceNumeric: 149,
-    title: 'GPTs Personalizados',
+    title: 'Asistente de IA para Atención al Cliente',
   },
   {
     description:
-      'Automatización de procesos administrativos conectando email, CRM y ERP. Elimina tareas repetitivas, reduce errores un 90% y acelera ciclos operativos ahorrando 30+ horas mensuales.',
+      'Elimina tareas repetitivas de facturación, seguimiento de leads y reporting mensual. Conectamos email, CRM y ERP para que todo funcione solo. Reduces errores un 90% y ahorras 30+ horas mensuales.',
     details: [
-      'Producto diseñado completamente para cumplir con las necesidades específicas del cliente.',
-      'No incluye ninguna función específica de base.',
-      'Workflows personalizados con herramientas como Zapier o Make.',
-      'Solución a medida según los requerimientos del negocio.',
+      'Automatización de facturación y seguimiento de pagos.',
+      'Sync automático entre CRM, email y herramientas de gestión.',
+      'Workflows personalizados para tu proceso de ventas específico.',
+      'Dashboards en tiempo real para monitorear todo el proceso.',
+      'Setup completo y mantenimiento incluido.',
     ],
     icon: <BoltIcon />,
     id: 'automatizaciones',
     price: 'Desde 349 €/mes',
     priceNumeric: 349,
-    title: 'Automatizaciones',
+    title: 'Automatización de Procesos Administrativos',
   },
   {
     description:
-      'Conecta ChatGPT o Claude con Slack, Google Drive y más mediante Model Context Protocol (MCP) para contexto en tiempo real.',
+      'Tu equipo accede a IA desde Slack con contexto de todos tus documentos. Consulta contratos, analiza propuestas y genera reportes sin salir de tu workspace. Productividad instantánea.',
     details: [
-      'Consultas directas a la IA desde Slack.',
-      'Resumen y análisis de documentos en Google Drive.',
-      'Desarrollo completo del MCP según necesidades.',
-      'Configuración de seguridad y permisos de acceso.',
+      'Consultas directas a IA desde Slack con contexto completo.',
+      'Análisis automático de documentos en Google Drive/SharePoint.',
+      'Resúmenes de meetings, propuestas y contratos en segundos.',
+      'Configuración de seguridad empresarial y permisos por equipo.',
+      'Training del equipo incluido en la instalación.',
     ],
     icon: <LinkIcon />,
     id: 'integracion-mcp',
     price: '299 € instalación',
     priceNumeric: 299,
-    title: 'Integración MCP',
+    title: 'IA Integrada en tu Workspace',
   },
   {
-    description: 'Kits de prompts por sector con guías y ejemplos listos para uso profesional.',
+    description: 'Convierte tu equipo en experto en IA con plantillas probadas para tu sector. Desde propuestas comerciales hasta análisis de mercado, todo listo para usar y obtener resultados profesionales.',
     details: [
-      'Creados específicamente para los últimos modelos de IA.',
-      'Optimizados para GPT-5, Claude Opus, Sonnet y Gemini 2.5 Pro.',
-      'Diseñados para cada propósito específico que solicite el cliente.',
-      'No son genéricos sino completamente personalizados.',
+      'Templates específicos para tu sector: marketing, consulting, inmobiliario, etc.',
+      'Prompts optimizados para GPT-4, Claude y otras IAs avanzadas.',
+      'Casos de uso reales: propuestas, reportes, análisis, presentaciones.',
+      'Guías paso a paso para adaptar cada template a tu negocio.',
+      'Actualizaciones gratuitas cuando salen nuevos modelos de IA.',
     ],
     icon: <DocumentTextIcon />,
     id: 'pack-prompts-pro',
     price: '99 € por pack',
     priceNumeric: 99,
-    title: 'Pack Prompts Pro',
+    title: 'Templates de IA para tu Sector',
   },
   {
     description:
-      'Programas de capacitación práctica en ChatGPT, Claude y otras IAs. Itinerarios por nivel y sector.',
+      'Convierte a tu equipo en experto en IA en 4 semanas. Formación práctica con casos reales de tu negocio. Desde principiantes hasta uso avanzado para diferentes departamentos.',
     details: [
-      'Sesiones prácticas con casos de uso reales.',
-      'Material didáctico y guías de referencia.',
-      'Enfoque en seguridad y uso ético de la IA.',
-      'Formación práctica sin certificación educativa oficial.',
+      'Sesiones prácticas con casos reales de tu empresa.',
+      'Itinerarios específicos: ventas, marketing, admin, soporte.',
+      'Material didáctico y guías de referencia permanentes.',
+      'Enfoque en productividad, seguridad y mejores prácticas.',
+      'Seguimiento post-formación para resolver dudas.',
     ],
     icon: <AcademicCapIcon />,
     id: 'formacion',
     price: 'Desde 89 €/hora',
     priceNumeric: 89,
-    title: 'Formación',
+    title: 'Capacitación en IA para Equipos',
   },
 ];
 
@@ -214,11 +219,11 @@ const Services: React.FC = () => {
               id="servicios-heading"
               className="text-4xl md:text-5xl font-semibold mb-6 text-white [text-shadow:0_0_20px_theme(colors.cyan.400/0.5)]"
             >
-              Nuestros Servicios Interactivos
+              Soluciones que Resuelven Problemas Reales
             </h2>
             <p className="text-lg max-w-3xl mx-auto leading-relaxed text-slate-400">
-              Soluciones de IA diseñadas para impulsar la productividad de tu negocio. Desde
-              consultoría estratégica hasta automatizaciones completamente personalizadas.
+              Identificamos exactamente dónde tu empresa pierde tiempo y dinero, luego implementamos 
+              IA para automatizar esos procesos. Resultados medibles desde el primer mes.
             </p>
           </header>
 

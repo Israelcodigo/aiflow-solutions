@@ -2,9 +2,12 @@ import React, { Suspense } from 'react';
 
 import Header from './components/Header';
 import Hero from './components/Hero';
+import MarketProof from './components/MarketProof';
 import IntroSection from './components/IntroSection';
 
 // Lazy loading para componentes no críticos
+const SolutionBlueprint = React.lazy(() => import('./components/SolutionBlueprint'));
+const DiagnosticOffering = React.lazy(() => import('./components/DiagnosticOffering'));
 const Services = React.lazy(() => import('./components/Services'));
 const Pricing = React.lazy(() => import('./components/Pricing'));
 const About = React.lazy(() => import('./components/About'));
@@ -29,7 +32,14 @@ const App: React.FC = () => {
       <Header />
       <main>
         <Hero />
+        <MarketProof />
         <IntroSection />
+        <Suspense fallback={<LoadingFallback />}>
+          <SolutionBlueprint />
+        </Suspense>
+        <Suspense fallback={<LoadingFallback />}>
+          <DiagnosticOffering />
+        </Suspense>
         <Suspense fallback={<LoadingFallback />}>
           <Services />
         </Suspense>

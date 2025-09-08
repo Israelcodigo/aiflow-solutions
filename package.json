@@ -23,6 +23,7 @@
     "clean": "npm run lint:fix && npm run format"
   },
   "dependencies": {
+    "@heroicons/react": "^2.2.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1"
   },

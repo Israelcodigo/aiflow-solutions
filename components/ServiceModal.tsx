@@ -1,8 +1,6 @@
 import React, { useEffect } from 'react';
 
-import type { IconProps } from './icons/Icons';
-
-import { CheckCircleIcon, XIcon } from './icons/Icons';
+import { CheckCircleIcon, XIcon, type IconProps } from './icons/Icons';
 
 
 
