@@ -40,15 +40,15 @@ const Header: React.FC = () => {
   return (
     <>
       <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled || isMenuOpen ? 'bg-[#0a0e27]/80 backdrop-blur-lg border-b border-cyan-400/20' : 'bg-transparent'}`}>
-        <div className="container mx-auto px-6 py-4">
+        <div className="container mx-auto px-6 py-5">
           <nav className="flex justify-between items-center">
-            <a href="#inicio" className="text-2xl font-bold text-cyan-400">Deified Machines</a>
+            <a href="#inicio" className="text-3xl font-bold text-cyan-400">Deified Machines</a>
             <ul className="hidden md:flex space-x-8">
               {navLinks.map((link) => (
                 <li key={link.href}>
                   <a 
                     href={link.href}
-                    className="text-white hover:text-cyan-400 transition-colors duration-300"
+                    className="text-lg text-white hover:text-cyan-400 transition-colors duration-300"
                   >
                     {link.label}
                   </a>
@@ -70,14 +70,14 @@ const Header: React.FC = () => {
         role="dialog"
         aria-modal="true"
       >
-          <div className="flex justify-between items-center container mx-auto px-6 h-[81px]">
-              <div className="text-2xl font-bold text-cyan-400">Deified Machines</div>
+          <div className="flex justify-between items-center container mx-auto px-6 h-[89px]">
+              <div className="text-3xl font-bold text-cyan-400">Deified Machines</div>
               <button onClick={() => setIsMenuOpen(false)} aria-label="Cerrar menú">
                   <XIcon className="w-6 h-6 text-white"/>
               </button>
           </div>
           <nav>
-            <ul className="flex flex-col items-center justify-center h-[calc(100vh-81px)] space-y-8 -mt-10">
+            <ul className="flex flex-col items-center justify-center h-[calc(100vh-89px)] space-y-8 -mt-10">
               {navLinks.map((link) => (
                 <li key={link.href}>
                   <a href={link.href} onClick={handleLinkClick} className="text-3xl font-bold text-white hover:text-cyan-400 transition-colors duration-300">
