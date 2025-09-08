@@ -30,7 +30,7 @@ const Hero: React.FC = () => {
                     <div className="flex-1 text-center lg:text-left">
                         <div className="animate-fade-in-down">
                             <h1 className="text-4xl md:text-6xl font-extrabold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                                Multiplica tu Productividad con IA
+                                Construye, escala y automatiza con IA
                             </h1>
                         </div>
                         <div className="animate-fade-in-up" style={{ animationDelay: '0.4s', animationFillMode: 'backwards' }}>
