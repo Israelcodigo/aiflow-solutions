@@ -26,7 +26,7 @@ const About: React.FC = () => {
                                 height="500"
                             />
                             <div className="absolute -bottom-4 -right-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg font-semibold shadow-lg">
-                                +5 años en IA
+                                Especialista IA
                             </div>
                         </div>
                     </div>
@@ -34,34 +34,33 @@ const About: React.FC = () => {
                     {/* Content */}
                     <div className="space-y-6">
                         <h3 className="text-3xl font-bold text-white mb-4">
-                            Expertos en IA Empresarial
+                            Especialista en Implementación de IA
                         </h3>
                         
                         <p className="text-slate-300 leading-relaxed text-lg">
-                            Somos un equipo especializado en implementación de inteligencia artificial para empresas. 
-                            Con más de <span className="text-cyan-400 font-semibold">5 años de experiencia</span> ayudando 
-                            a organizaciones a automatizar procesos y aumentar su productividad.
+                            Soy un desarrollador especializado en aplicar inteligencia artificial a problemas empresariales reales. 
+                            Mi enfoque está en <span className="text-cyan-400 font-semibold">implementar soluciones prácticas</span> 
+                            que generen valor inmediato, sin complicaciones técnicas innecesarias.
                         </p>
 
                         <p className="text-slate-300 leading-relaxed text-lg">
-                            Hemos trabajado con <span className="text-cyan-400 font-semibold">+50 empresas</span> de 
-                            diversos sectores, desde startups hasta corporaciones, implementando soluciones que han 
-                            generado ahorros promedio de <span className="text-cyan-400 font-semibold">30+ horas mensuales</span> 
-                            por empleado.
+                            Me dedico a <span className="text-cyan-400 font-semibold">dominar herramientas como ChatGPT, Claude y Gemini</span> 
+                            para crear automatizaciones personalizadas. Mi valor está en saber exactamente cómo aplicar estas 
+                            tecnologías para resolver problemas específicos de cada negocio.
                         </p>
 
                         <div className="grid grid-cols-3 gap-6 mt-8">
                             <div className="text-center p-4 bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-xl border border-slate-700/50">
-                                <div className="text-2xl font-bold text-cyan-400 mb-1">+50</div>
-                                <div className="text-sm text-slate-400">Empresas</div>
+                                <div className="text-2xl font-bold text-cyan-400 mb-1">100%</div>
+                                <div className="text-sm text-slate-400">Práctico</div>
                             </div>
                             <div className="text-center p-4 bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-xl border border-slate-700/50">
-                                <div className="text-2xl font-bold text-cyan-400 mb-1">5+</div>
-                                <div className="text-sm text-slate-400">Años exp.</div>
+                                <div className="text-2xl font-bold text-cyan-400 mb-1">IA</div>
+                                <div className="text-sm text-slate-400">Aplicada</div>
                             </div>
                             <div className="text-center p-4 bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-xl border border-slate-700/50">
-                                <div className="text-2xl font-bold text-cyan-400 mb-1">30h</div>
-                                <div className="text-sm text-slate-400">Ahorro/mes</div>
+                                <div className="text-2xl font-bold text-cyan-400 mb-1">Real</div>
+                                <div className="text-sm text-slate-400">Valor</div>
                             </div>
                         </div>
 
