@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { LightbulbIcon, RobotIcon, BoltIcon, LinkIcon, DocumentTextIcon, AcademicCapIcon, CheckCircleIcon, ShoppingCartIcon } from './icons/Icons';
+import { LinkIcon, DocumentTextIcon, AcademicCapIcon, CheckCircleIcon, ShoppingCartIcon } from './icons/Icons';
 import ServiceModal from './ServiceModal';
 import ShoppingCart, { CartItem } from './ShoppingCart';
 import { trackServiceInteraction, trackCTAClick } from '../src/utils/analytics';

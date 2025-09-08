@@ -33,17 +33,17 @@ const About: React.FC = () => {
                     {/* Content */}
                     <div className="space-y-6">
                         <h3 className="text-3xl font-bold text-white mb-4">
-                            Transformo Ideas en Automatizaciones Inteligentes
+                            Transformamos Ideas en Automatizaciones Inteligentes
                         </h3>
                         
                         <p className="text-slate-300 leading-relaxed text-lg">
-                            Como desarrollador especializado en IA aplicada, mi misión es clara: convertir el potencial de la 
+                            Como equipo especializado en IA aplicada, nuestra misión es clara: convertir el potencial de la 
                             inteligencia artificial en <span className="text-cyan-400 font-semibold">resultados tangibles para tu negocio</span>. 
-                            No me conformo con teoría, construyo soluciones que funcionan desde el día uno.
+                            No nos conformamos con teoría, construimos soluciones que funcionan desde el día uno.
                         </p>
 
                         <p className="text-slate-300 leading-relaxed text-lg">
-                            Mi expertise radica en <span className="text-cyan-400 font-semibold">dominar las herramientas más avanzadas</span> 
+                            Nuestro expertise radica en <span className="text-cyan-400 font-semibold">dominar las herramientas más avanzadas</span> 
                             —ChatGPT, Claude, Gemini— y orquestarlas para crear automatizaciones que eliminan tareas repetitivas, 
                             optimizan procesos y liberan tiempo valioso. Cada implementación está diseñada para generar 
                             <span className="text-cyan-400 font-semibold">impacto medible inmediato</span>.
