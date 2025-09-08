@@ -41,7 +41,7 @@ const Header: React.FC = () => {
       <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled || isMenuOpen ? 'bg-[#0a0e27]/80 backdrop-blur-lg border-b border-cyan-400/20' : 'bg-transparent'}`}>
         <div className="container mx-auto px-6 py-4">
           <nav className="flex justify-between items-center">
-            <a href="#inicio" className="text-2xl font-bold text-cyan-400">AIFlow Solutions</a>
+            <a href="#inicio" className="text-2xl font-bold text-cyan-400">Deified Machines</a>
             <ul className="hidden md:flex space-x-8">
               {navLinks.map((link) => (
                 <li key={link.href}>
@@ -70,7 +70,7 @@ const Header: React.FC = () => {
         aria-modal="true"
       >
           <div className="flex justify-between items-center container mx-auto px-6 h-[81px]">
-              <div className="text-2xl font-bold text-cyan-400">AIFlow Solutions</div>
+              <div className="text-2xl font-bold text-cyan-400">Deified Machines</div>
               <button onClick={() => setIsMenuOpen(false)} aria-label="Cerrar menú">
                   <XIcon className="w-6 h-6 text-white"/>
               </button>

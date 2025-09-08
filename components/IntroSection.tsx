@@ -62,7 +62,7 @@ const IntroSection: React.FC = () => {
                      className={`transition-all duration-1000 ease-out delay-300 mt-8 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
                 >
                     <p className="text-lg text-slate-400 max-w-4xl mx-auto leading-relaxed">
-                         En AIFlow Solutions, convertimos la IA en un activo operativo. Diseñamos e integramos soluciones a medida que se alinean con tus procesos, fortalecen a tu equipo y entregan resultados medibles. Nuestro compromiso: tecnología avanzada aplicada de forma práctica, segura y eficiente.
+                         En Deified Machines, convertimos la IA en un activo operativo. Diseñamos e integramos soluciones a medida que se alinean con tus procesos, fortalecen a tu equipo y entregan resultados medibles. Nuestro compromiso: tecnología avanzada aplicada de forma práctica, segura y eficiente.
                     </p>
                 </div>
             </div>
