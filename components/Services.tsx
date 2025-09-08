@@ -8,7 +8,7 @@ import { trackServiceInteraction, trackCTAClick } from '../src/utils/analytics';
 const servicesData = [
     {
         id: "consultoria-ia",
-        icon: <LightbulbIcon />,
+        icon: <img src="/images/consultoria-demo.gif" alt="Demostración de consultoría IA en acción" className="w-12 h-12 object-cover rounded-lg" loading="lazy" />,
         title: "Consultoría IA",
         description: "Auditoría técnica de 2 horas que identifica oportunidades de automatización de procesos para pymes, reduciendo hasta 20 horas semanales de trabajo manual y aumentando la productividad un 40%.",
         price: "150 € por sesión",
@@ -23,7 +23,7 @@ const servicesData = [
     },
     {
         id: "gpts-personalizados",
-        icon: <RobotIcon />,
+        icon: <img src="/images/gpt-demo.gif" alt="Demo de chatbot GPT personalizado funcionando" className="w-12 h-12 object-cover rounded-lg" loading="lazy" />,
         title: "GPTs Personalizados",
         description: "Chatbots para ecommerce y asistentes IA personalizados que automatizan atención al cliente, reducen tiempos de respuesta un 85% y aumentan conversiones hasta un 25%.",
         price: "149 € por GPT",
@@ -36,7 +36,7 @@ const servicesData = [
     },
     {
         id: "automatizaciones",
-        icon: <BoltIcon />,
+        icon: <img src="/images/automation-demo.gif" alt="Automatización de procesos en tiempo real" className="w-12 h-12 object-cover rounded-lg" loading="lazy" />,
         title: "Automatizaciones",
         description: "Automatización de procesos administrativos conectando email, CRM y ERP. Elimina tareas repetitivas, reduce errores un 90% y acelera ciclos operativos ahorrando 30+ horas mensuales.",
         price: "Desde 349 €/mes",
